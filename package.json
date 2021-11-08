@@ -9,7 +9,7 @@
     "build": "svelte-kit build && touch docs/.nojekyll",
     "postinstall": "husky install"
   },
-  "repository": "https://github.com/reuters-graphics/bluprint_docs-site.git",
+  "repository": "https://api.github.com/repos/reuters-graphics/docs_graphics-kit",
   "lint-staged": {
     "*.js": "eslint --cache --fix",
     "*.{js,css,md,svelte}": "prettier --write"

@@ -18,7 +18,7 @@ const pkg = fs.readJSONSync(new URL('./package.json', import.meta.url));
 const homepage =
   'https://reuters-graphics.github.io/' +
   pkg.repository
-    .replace('https://github.com/reuters-graphics/', '')
+    .replace('https://api.github.com/repos/reuters-graphics/', '')
     .replace(/\.git$/, '');
 
 const prod = process.env.NODE_ENV === 'production';
