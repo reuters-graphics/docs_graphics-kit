@@ -1,0 +1,10 @@
+article {
+  margin: 4rem 0;
+  min-height: calc(100vh - 49px - 8rem);
+}
+
+nav {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.14);
+  z-index: 999;
+  margin-bottom: 2px;
+}
