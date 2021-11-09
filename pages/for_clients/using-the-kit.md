@@ -26,7 +26,7 @@ After dependencies are installed, you can start a development server to preview 
 npm start
 ```
 
-Read more about how to make changes to the project's source code by reading the [Graphics developer docs](../for_developers/README.md).
+Read more about how to make changes to the project's source code by reading the for developer docs.
 
 ## Building for self-hosting
 
