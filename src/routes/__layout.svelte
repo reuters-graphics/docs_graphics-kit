@@ -7,7 +7,7 @@
 
 <script>
   import { Nav } from '@reuters-graphics/graphics-svelte-components';
-  import 'prism-themes/themes/prism-darcula.css';
+  import 'prism-themes/themes/prism-nord.css';
   import TOC from '$lib/components/TOC/index.svelte';
 
   export let docs;

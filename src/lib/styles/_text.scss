@@ -8,6 +8,10 @@ h5,
 h6 {
   font-weight: 700;
   line-height: 1.2;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
   a {
     color: inherit;
     &:hover {
@@ -17,12 +21,53 @@ h6 {
   }
 }
 
-p {
+h1,
+h2 {
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid hsla(210, 18%, 87%, 1);
+}
+
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+table {
   code {
     margin: 0 3px;
     background-color: #efefef;
-    padding: 1px 8px;
-    border-radius: 2px;
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 80%;
+    border-radius: 6px;
+    color: #666;
+    font-weight: 200;
+  }
+}
+
+p,
+ul,
+ol {
+  a {
+    color: #0969da;
+    &:hover {
+      color: #0969da;
+      text-decoration: underline;
+    }
   }
 }
 
@@ -42,4 +87,9 @@ section.body-text {
 
 hr {
   margin: 3rem 0;
+}
+
+blockquote {
+  border-left: 6px solid #ccc;
+  padding: 0 1em;
 }

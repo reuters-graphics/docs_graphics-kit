@@ -18,11 +18,13 @@ const getOrder = (d) => {
 
 export default (docs, activePage) => {
   const groupedDocs = groupBy(
-    docs.map((doc) => ({
-      ...doc,
-      navGroup: getGroup(doc.slug),
-      isActive: isActive(doc.slug, activePage),
-    })),
+    docs
+      .map((doc) => ({
+        ...doc,
+        navGroup: getGroup(doc.slug),
+        isActive: isActive(doc.slug, activePage),
+      }))
+      .sort((a, b) => getOrder(a) - getOrder(b)),
     (d) => d.navGroup
   );
   const groupOrder = Object.keys(groupedDocs);

@@ -1,5 +1,5 @@
 pre[class*='language-'] {
-  margin: 2.5rem auto;
+  margin: 1.5rem auto 2.5rem;
 }
 
 iframe {
@@ -9,6 +9,5 @@ iframe {
 
 :not(pre) > code[class*='language-'],
 pre[class*='language-'] {
-  background: #333;
   border-radius: 4px;
 }

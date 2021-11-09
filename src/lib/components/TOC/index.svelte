@@ -55,8 +55,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    max-height: calc(100vh - 49px);
-    overflow-y: scroll;
     div.page-menu {
       position: relative;
       flex-basis: 18rem;
@@ -64,6 +62,8 @@
       border-right: 1px solid #ddd;
       padding: 1.5rem 15px 1.5rem 15px;
       transition: all 0.3s ease-in-out;
+      max-height: calc(100vh - 49px);
+      overflow-y: scroll;
       @media (max-width: $mobile-break) {
         position: fixed;
         width: 400px;
@@ -82,9 +82,9 @@
         }
       }
       button {
-        position: absolute;
-        top: 5px;
-        right: -60px;
+        position: fixed;
+        top: 54px;
+        left: 5px;
         border: 1px solid #ccc;
         border-radius: 50%;
         display: none;
@@ -94,9 +94,12 @@
         width: 50px;
         color: #999;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.14);
-        transition: all 0.2s;
+        transition: all 0.3s ease-in-out;
         &.active {
-          right: -25px;
+          left: 375px;
+          @media (max-width: 450px) {
+            left: 275px;
+          }
         }
         @media (max-width: $mobile-break) {
           display: flex;
@@ -108,7 +111,7 @@
         font-size: 0.85rem;
         letter-spacing: 1px;
         color: #999;
-        margin: 0.75rem 0 0.25rem 0;
+        margin: 1.75rem 0 0.25rem 0;
         white-space: nowrap;
         overflow: hidden;
         max-width: 100%;
@@ -123,7 +126,8 @@
         li {
           font-size: 1.1rem;
           line-height: 1.25rem;
-          margin: 0.4rem 0;
+          margin: 0.5rem 0;
+          padding: 0.2rem 0 0.1rem;
 
           a {
             color: #333;
