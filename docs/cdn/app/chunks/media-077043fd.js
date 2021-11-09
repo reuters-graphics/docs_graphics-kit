@@ -1,4 +1,4 @@
-import{S as Gs,i as Vs,s as zs,e as t,t as o,k as Os,c as n,a as e,g as p,d as s,n as As,b as i,f as Bs,I as a,V as Qa}from"./vendor-32a43119.js";function Js(Ds){let l,E,_,ua,h,Y,y,da,ha,w,P,ka,F,K,g,ga,fa,S,j,ma,f,va,N,Ea,_a,C,Ws=`<code class="language-undefined">src/
+import{S as Gs,i as Vs,s as zs,e as t,t as o,k as Os,c as n,a as e,g as p,d as s,n as As,b as i,f as Bs,I as a,V as Qa}from"./vendor-af66daed.js";function Js(Ds){let l,E,_,ua,h,Y,y,da,ha,w,P,ka,F,K,g,ga,fa,S,j,ma,f,va,N,Ea,_a,C,Ws=`<code class="language-undefined">src/
   statics/
     images/
       my-image.jpg \u{1F448}

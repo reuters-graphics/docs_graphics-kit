@@ -1,4 +1,4 @@
-import{S as re,i as ce,s as ie,e as t,t as o,k as h,j as ue,c as n,a as s,g as p,d as e,n as d,m as he,b as c,X as Ba,f as de,I as a,o as ke,V as ge,x as me,u as fe,v as ve}from"./vendor-32a43119.js";import{Y as ye}from"./index-83da857f.js";function we(Zn){let l,T,j,Da,i,ea,I,Wa,Ya,sa,H,Ja,qa,oa,L,Fa,Va,pa,A,Ua,za,la,C,Ka,Qa,y,M,ra,Xa,Za,at,B,tt,w,nt,_,et,st,ot,b,G,R,pt,ca,O,Qt,m,lt,E,rt,ct,ia,it,ut,f,ht,ua,dt,kt,ha,gt,mt,da,ft,u,ka,vt,yt,ga,wt,_t,ma,bt,Et,fa,St,Pt,va,xt,Tt,ya,jt,wa,It,N,ae=`<code class="language-bash">+ Headline
+import{S as re,i as ce,s as ie,e as t,t as o,k as h,j as ue,c as n,a as s,g as p,d as e,n as d,m as he,b as c,X as Ba,f as de,I as a,o as ke,V as ge,x as me,u as fe,v as ve}from"./vendor-af66daed.js";import{Y as ye}from"./index-d2d214b9.js";function we(Zn){let l,T,j,Da,i,ea,I,Wa,Ya,sa,H,Ja,qa,oa,L,Fa,Va,pa,A,Ua,za,la,C,Ka,Qa,y,M,ra,Xa,Za,at,B,tt,w,nt,_,et,st,ot,b,G,R,pt,ca,O,Qt,m,lt,E,rt,ct,ia,it,ut,f,ht,ua,dt,kt,ha,gt,mt,da,ft,u,ka,vt,yt,ga,wt,_t,ma,bt,Et,fa,St,Pt,va,xt,Tt,ya,jt,wa,It,N,ae=`<code class="language-bash">+ Headline
 + BodyText
 + Photo
 + BodyText
