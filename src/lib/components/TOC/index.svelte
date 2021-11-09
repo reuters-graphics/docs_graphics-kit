@@ -4,11 +4,24 @@
   import { page } from '$app/stores';
   import Fa from 'svelte-fa/src/fa.svelte';
   import { faHome, faBars } from '@fortawesome/free-solid-svg-icons';
+  import { onMount } from 'svelte';
+
   export let docs;
 
   let showMobileMenu = false;
+  let scrollContainer;
 
   $: [groupedDocs, groupOrder] = orderDocs(docs, $page.path);
+
+  const scrollTop = () => {
+    scrollContainer.scrollTop = 0;
+  };
+
+  onMount(() => {
+    window.addEventListener('sveltekit:navigation-end', scrollTop);
+    return () =>
+      window.removeEventListener('sveltekit:navigation-end', scrollTop);
+  });
 </script>
 
 <div class="page-container">
@@ -39,7 +52,7 @@
       </ul>
     {/each}
   </div>
-  <div class="page-content">
+  <div class="page-content" bind:this="{scrollContainer}">
     <slot />
   </div>
 </div>
