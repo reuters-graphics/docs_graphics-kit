@@ -1,4 +1,8 @@
-![](https://graphics.thomsonreuters.com/style-assets/images/logos/reuters-graphics-logo/svg/graphics-logo-color-dark.svg)
+---
+title: Readme
+published: true
+order: 30
+---
 
 # Graphics developer docs
 
