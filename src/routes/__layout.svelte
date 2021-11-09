@@ -20,7 +20,7 @@
 />
 
 <TOC docs="{docs}">
-  <article class="container-fluid">
+  <article class="container-fluid markdown-body">
     <slot />
   </article>
 </TOC>

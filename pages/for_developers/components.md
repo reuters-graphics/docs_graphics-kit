@@ -6,6 +6,7 @@ order: 6
 
 <script>
   import YouTube from '$lib/components/YouTube/index.svelte';
+  import { getPath } from '$utils/statics';
 </script>
 
 ::: section wide
@@ -18,15 +19,23 @@ order: 6
 - [Structuring your component's directory](#structuring-your-components-directory)
 - [Driving components with Google docs](#driving-components-with-google-docs)
 
+---
+
+<YouTube id="VTtDTiuY2w4" />
+
+<div style='margin: -2rem 0 2rem;'>
+
 > **Tip**: This video is a complete intro to writing Svelte in our new graphics kit from the ground up by writing a simple before & after image slider. It's a longer video, but if you're coming in fresh to Svelte and the concept of components, it's a good spot to start.
 >
 > 💡 **You'll follow along more easily if you've checked out the first 3 - 4 sections of the [official Svelte tutorial](https://svelte.dev/tutorial/basics).**
 
-<YouTube id="VTtDTiuY2w4" />
+</div>
+
+---
 
 ## What's a "component"?
 
-![](https://user-images.githubusercontent.com/12295494/140011259-9aab7e74-151d-4e99-88d5-b2b30c8ade4b.jpg 'Components are parts of a page')
+<img src="{getPath('images/illos/parts-of-a-page.jpeg')}" alt="Components are parts of a page" />
 
 If you've gone through any of the [Svelte tutorial](https://svelte.dev/tutorial/basics), you'll know pages in Svelte (and React, Vue and basically any modern JS framework) are made up of **components**.
 

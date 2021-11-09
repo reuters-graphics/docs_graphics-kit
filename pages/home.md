@@ -12,22 +12,28 @@ published: true
 
 # Graphics Kit
 
-This site hosts documentation for building and customizing graphics with the [Reuters Graphics Kit](https://github.com/reuters-graphics/bluprint_graphics-kit) for graphics developers and clients.
+For graphics developers and clients, all the docs you need to build, customize and publish graphics projects with the [Reuters Graphics Kit](https://github.com/reuters-graphics/bluprint_graphics-kit).
 
 :::
 
-<style>
+<style lang="scss">
   lottie-player {
     width: 150px;
     height: 150px;
-    margin: 0 auto -3rem;
+    margin: 0 auto -1.75rem;
   }
   section {
-    padding-top: 0;
-  }
-  h1 {
-    text-align: center;
-    font-weight: 200;
-    border-bottom: 0;
+    padding-top: 4rem;
+    @media(max-width: 900px) {
+      padding-top: 3rem;
+    }
+    h1 {
+      text-align: center;
+      font-weight: 200;
+      border-bottom: 0;
+    }
+    p {
+      text-align: center;
+    }
   }
 </style>

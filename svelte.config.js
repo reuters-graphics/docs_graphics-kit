@@ -14,14 +14,15 @@ const getRootRelativePath = (homepageURL) => {
     .replace(/\/$/, '');
 };
 
-const pkg = fs.readJSONSync(new URL('./package.json', import.meta.url));
-const homepage =
-  'https://reuters-graphics.github.io/' +
-  pkg.repository
-    .replace('https://api.github.com/repos/reuters-graphics/', '')
-    .replace(/\.git$/, '');
-
 const prod = process.env.NODE_ENV === 'production';
+const pkg = fs.readJSONSync(new URL('./package.json', import.meta.url));
+
+if (prod && !pkg.homepage)
+  throw new Error(
+    'Need to fill out the homepage in package.json before building!'
+  );
+
+const homepage = prod ? pkg.homepage.replace(/\/$/, '') : '';
 
 process.env.VITE_DATELINE = new Date().toISOString();
 

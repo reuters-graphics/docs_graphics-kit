@@ -17,5 +17,11 @@ export default {
     remarkAbbr,
     [remarkContainers],
   ],
-  rehypePlugins: [rehypeSlug, [rehypeAutolinkHeadings, { behavior: 'wrap' }]],
+  rehypePlugins: [
+    rehypeSlug,
+    [
+      rehypeAutolinkHeadings,
+      { behavior: 'wrap', properties: { class: 'heading-link' } },
+    ],
+  ],
 };

@@ -2,7 +2,8 @@
   export let id;
 </script>
 
-<section class="graphic">
+<section class="graphic wide">
+  <h5>Video walk-through ▶️</h5>
   <div class="embed-container">
     <iframe
       src="{`https://www.youtube.com/embed/${id}`}"
@@ -12,11 +13,20 @@
   </div>
 </section>
 
-<style>
+<style lang="scss">
   section.graphic {
-    margin: -2rem auto 4rem;
+    margin: 1rem auto 4rem;
+    background: #eee;
+    padding: 5px 20px 20px 20px;
+    border: 1px solid #ccc;
+    h5 {
+      font-size: 1rem;
+      margin-top: 5px;
+      margin-bottom: 0;
+    }
   }
   .embed-container {
+    margin-top: -4rem;
     position: relative;
     padding-bottom: 56.25%;
     height: 0;

@@ -1,5 +1,5 @@
 ---
-title: Styles
+title: Styling pages
 published: true
 order: 8
 ---

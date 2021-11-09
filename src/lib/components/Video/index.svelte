@@ -11,6 +11,7 @@
 
 <style>
   video {
-    margin-bottom: 3rem;
+    display: block;
+    margin: 0 auto 3rem;
   }
 </style>

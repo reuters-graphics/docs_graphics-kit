@@ -4,6 +4,8 @@
 
 A Reuters Graphics docs site.
 
+[See the site.](https://reuters-graphics.github.io/docs_graphics-kit/)
+
 Created from a [bluprint](https://github.com/reuters-graphics/bluprint_docs-site).
 
 ## Quickstart

@@ -1,12 +1,12 @@
 ---
-title: Using the kit
+title: Using the Kit
 published: true
 order: 1
 ---
 
 ::: section wide
 
-# Using the kit
+# Using the Kit
 
 Reuters graphics can be completely customized to suit the needs of your site and built to host on your servers by editing the source code directly.
 
@@ -26,7 +26,7 @@ After dependencies are installed, you can start a development server to preview 
 npm start
 ```
 
-Read more about how to make changes to the project's source code by reading the for developer docs.
+Read more about how to make changes to the project's source code by reading the developer docs on this site.
 
 ## Building for self-hosting
 
