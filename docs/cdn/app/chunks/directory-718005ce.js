@@ -1,4 +1,4 @@
-import{S as Ia,i as Na,s as La,e as a,t as n,j as Fa,c as t,a as o,g as r,d as s,m as Ja,b as l,f as Ka,I as e,o as Wa,V as qa,x as Ua,u as Va,v as za}from"./vendor-c23f9705.js";import{Y as Ba}from"./index-a8c9b2bb.js";function Qa(Aa){let c,H,u,He,f,G,xa=`<code class="language-bash">locales/
+import{S as Ia,i as Na,s as La,e as a,t as n,j as Fa,c as t,a as o,g as r,d as s,m as Ja,b as l,f as Ka,I as e,o as Wa,V as qa,x as Ua,u as Va,v as za}from"./vendor-1e9a01ff.js";import{Y as Ba}from"./index-c317f257.js";function Qa(Aa){let c,H,u,He,f,G,xa=`<code class="language-bash">locales/
 media-assets/
 pages/
 src/

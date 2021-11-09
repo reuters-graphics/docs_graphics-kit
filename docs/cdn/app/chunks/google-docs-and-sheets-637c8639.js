@@ -1,4 +1,4 @@
-import{S as ve,i as Ee,s as Ge,e as a,t as o,c as n,a as r,g as t,d as s,b as l,f as be,I as e,V as te}from"./vendor-c23f9705.js";function je(_e){let c,E,h,z,i,R,X,A,L,p,U,H,g,B,P,F,K,f,M,w,N,W,G,u,Y,y,q,b,me=`<code class="language-javascript"><span class="token punctuation">&#123;</span>
+import{S as ve,i as Ee,s as Ge,e as a,t as o,c as n,a as r,g as t,d as s,b as l,f as be,I as e,V as te}from"./vendor-1e9a01ff.js";function je(_e){let c,E,h,z,i,R,X,A,L,p,U,H,g,B,P,F,K,f,M,w,N,W,G,u,Y,y,q,b,me=`<code class="language-javascript"><span class="token punctuation">&#123;</span>
   <span class="token string">"docs"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
     <span class="token string">"locales/en/content.json"</span><span class="token operator">:</span> <span class="token string">"XXXX_Google_doc_ID_XXXX"</span>
   <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
