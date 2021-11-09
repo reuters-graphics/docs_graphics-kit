@@ -5,43 +5,6 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  font-weight: 700;
-  line-height: 1.2;
-  margin-top: 24px;
-  margin-bottom: 16px;
-  font-weight: 600;
-  line-height: 1.25;
-  a {
-    color: inherit;
-    &:hover {
-      color: inherit;
-      text-decoration: none;
-    }
-  }
-}
-
-h1,
-h2 {
-  padding-bottom: 0.3em;
-  border-bottom: 1px solid hsla(210, 18%, 87%, 1);
-}
-
-h1 {
-  font-size: 2rem;
-}
-h2 {
-  font-size: 1.5rem;
-}
-h3 {
-  font-size: 1.25rem;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
 h6,
 p,
 ul,
@@ -59,15 +22,21 @@ table {
   }
 }
 
+a,
+.github-link {
+  color: #0969da;
+  background: none;
+  &:hover {
+    color: #0969da;
+    text-decoration: underline;
+  }
+}
+
 p,
 ul,
 ol {
   a {
-    color: #0969da;
-    &:hover {
-      color: #0969da;
-      text-decoration: underline;
-    }
+    @extend .github-link;
   }
 }
 
@@ -82,14 +51,23 @@ section.body-text {
     @include font-sans;
     font-weight: 200;
     font-size: 1.2rem;
+    a {
+      @extend .github-link;
+    }
   }
 }
 
-hr {
-  margin: 3rem 0;
-}
-
-blockquote {
-  border-left: 6px solid #ccc;
-  padding: 0 1em;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  a {
+    color: inherit;
+    &:hover {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
 }

@@ -8,9 +8,11 @@ published: true
 
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
-<lottie-player src="https://assets2.lottiefiles.com/packages/lf20_RoTZVz.json" mode="bounce" background="transparent"  speed="2" loop  autoplay></lottie-player>
+<lottie-player src="https://assets2.lottiefiles.com/packages/lf20_RoTZVz.json" mode="bounce" background="transparent"  speed="1" loop  autoplay></lottie-player>
 
 # Graphics Kit
+
+This site hosts documentation for building and customizing graphics with the [Reuters Graphics Kit](https://github.com/reuters-graphics/bluprint_graphics-kit) for graphics developers and clients.
 
 :::
 
@@ -26,5 +28,6 @@ published: true
   h1 {
     text-align: center;
     font-weight: 200;
+    border-bottom: 0;
   }
 </style>
