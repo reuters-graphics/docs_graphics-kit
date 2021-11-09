@@ -2,16 +2,9 @@
 
 # docs-graphics-kit
 
-A Reuters Graphics docs site.
+Documentation for using the [Reuters Graphics Kit](https://github.com/reuters-graphics/bluprint_graphics-kit).
 
-[See the site.](https://reuters-graphics.github.io/docs_graphics-kit/)
+### [📚 Read the docs.](https://reuters-graphics.github.io/docs_graphics-kit/)
 
-Created from a [bluprint](https://github.com/reuters-graphics/bluprint_docs-site).
 
-## Quickstart
-
-```
-yarn start
-```
-
-Now [read the docs](https://reuters-graphics.github.io/bluprint_docs-site/) to see how to create your docs site!
+_A Reuters Graphics docs site, created from a [bluprint](https://github.com/reuters-graphics/bluprint_docs-site)._

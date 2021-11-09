@@ -1,5 +1,5 @@
 ---
-title: The kit
+title: The Kit
 published: true
 order: 20
 ---
