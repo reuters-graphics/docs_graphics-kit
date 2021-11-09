@@ -1,4 +1,4 @@
-import{S as La,i as Sa,s as Oa,e,t as p,c as t,a as o,g as l,d as n,b as r,f as Ra,I as a,V as ta}from"./vendor-32a43119.js";function Ca(fa){let s,h,m,D,i,G,M,N,F,v,Y,q,T,V,H,z,f,ya=`<code class="language-bash">locales/
+import{S as La,i as Sa,s as Oa,e,t as p,c as t,a as o,g as l,d as n,b as r,f as Ra,I as a,V as ta}from"./vendor-af66daed.js";function Ca(fa){let s,h,m,D,i,G,M,N,F,v,Y,q,T,V,H,z,f,ya=`<code class="language-bash">locales/
   en/
     content.json
   de/
