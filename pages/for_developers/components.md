@@ -35,7 +35,7 @@ order: 6
 
 ## What's a "component"?
 
-<img src="{getPath('images/illos/parts-of-a-page.jpeg')}" alt="Components are parts of a page" />
+<img src="{getPath('images/illos/what-is.jpg')}" alt="Components are parts of a page" />
 
 If you've gone through any of the [Svelte tutorial](https://svelte.dev/tutorial/basics), you'll know pages in Svelte (and React, Vue and basically any modern JS framework) are made up of **components**.
 
@@ -67,23 +67,21 @@ If you think about your page outlined in components, then, your page may look li
 
 Svelte components include not only have all the component's html but also any JS and SCSS needed for the component all in a single file. This structure makes it easy to work on parts of your page in isolation and encourage strong organization in your project.
 
-![](https://user-images.githubusercontent.com/12295494/140011258-66cfc5c2-d2d2-4318-b84b-352b8c7b806d.jpg 'Structure of a svelte component')
+<img src="{getPath('images/illos/structure-of-a-component.jpg')}" alt='Structure of a svelte component'/>
 
 ## Props
 
 At it's core, reusability of a component is driven by these things called "props", which can be really powerful once we learn how to think about them. Let's dive in.
 
-What if I told you you've already been using props without calling them that?
-
 First, let me start with some jargon.
 
-![](https://user-images.githubusercontent.com/12295494/140307702-f5f8d06d-1beb-48ff-b547-167425b197db.jpg 'Jargon')
+<img src="{getPath('images/illos/one-simple-jargon.jpg')}" alt='Jargon'/>
 
-![](https://user-images.githubusercontent.com/12295494/140307683-74727a36-b8e2-45d9-b204-9e42d179f876.jpg 'JS in HTML')
+<img src="{getPath('images/illos/js-in-html.jpg')}" alt='JS in HTML'/>
 
 Now, to explain what props are:
 
-![](https://user-images.githubusercontent.com/12295494/140307709-3e9c0b53-cac6-4568-92a8-03e71701f02c.jpg 'Props')
+<img src="{getPath('images/illos/props-passing-down.jpg')}" alt='Props'/>
 
 ## Structuring your component's directory
 

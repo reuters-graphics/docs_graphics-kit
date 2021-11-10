@@ -178,5 +178,5 @@ temp/
 .svelte-kit/
 dist/
 graphics-pack/
-project-files/docs-ai-ps/
-src/statics/images/docs-ai-ps
+project-files/
+src/statics/images/illos/*.ai

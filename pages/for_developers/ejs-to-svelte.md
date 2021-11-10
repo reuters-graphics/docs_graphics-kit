@@ -4,6 +4,10 @@ published: true
 order: 7
 ---
 
+<script>
+  import { getPath } from '$utils/statics';
+</script>
+
 ::: section wide
 
 # Transitioning from EJS to Svelte
@@ -12,9 +16,13 @@ This doc includes some examples of how basic things you may have done in the pre
 
 > 💡 **Pro tip:** You can install [Svelte snippets](https://marketplace.visualstudio.com/items?itemName=fivethree.vscode-svelte-snippets) in VSCode, which will suggest simple code blocks as you write and should help you while you're learning.
 
+## Templates vs Components
+
+<img src="{getPath('images/illos/split.jpg')}" alt='Split'/>
+
 ## Loops
 
-![](https://user-images.githubusercontent.com/12295494/140286773-97eeb3e4-f3fa-427f-a426-1735b0723528.jpg 'for-loop')
+<img src="{getPath('images/illos/for-loop.jpg')}" alt='for-loop'/>
 
 [📖 Read the docs: each blocks](https://svelte.dev/tutorial/each-blocks)
 
@@ -26,7 +34,7 @@ This doc includes some examples of how basic things you may have done in the pre
 
 ## Conditionals
 
-![](https://user-images.githubusercontent.com/12295494/140286794-3b4210a0-125d-4526-9615-cf45b5557afd.jpg 'if-else')
+<img src="{getPath('images/illos/if-else.jpg')}" alt='if-else'/>
 
 [📖 Read the docs: if blocks](https://svelte.dev/tutorial/if-blocks)
 
