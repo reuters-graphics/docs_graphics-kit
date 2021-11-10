@@ -16,6 +16,6 @@ Here's how...
 
 ### ✏️ Become a contributor
 
-You can contribute directly by cloning (Reuters Graphics staff) or forking (Reuters clients) the [Graphics Kit repo](https://github.com/reuters-graphics/bluprint_graphics-kit/) and then submitting a pull request.
+You can contribute directly by submitting a pull request to the [Graphics Kit repo](https://github.com/reuters-graphics/bluprint_graphics-kit/).
 
 :::
