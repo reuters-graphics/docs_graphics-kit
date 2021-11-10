@@ -9,17 +9,17 @@
 
 		
 
-		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-cd6cd4c3.js">
+		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-eb99a37f.js">
 		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/chunks/vendor-ac126d1d.js">
 		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/chunks/preload-helper-58936509.js">
 		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/__layout.svelte-949fb38c.js">
-		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-2175bdfa.js">
+		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-37237bce.js">
 		<link rel="stylesheet" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/assets/start-c446e5f0.css">
 		<link rel="stylesheet" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/assets/vendor-0825bdaf.css">
 		<link rel="stylesheet" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/assets/pages/__layout.svelte-8058701c.css">
 
 		<script type="module">
-			import { start } from "https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-cd6cd4c3.js";
+			import { start } from "https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-eb99a37f.js";
 			start({
 				target: document.querySelector("#svelte-app"),
 				paths: {"base":"/docs_graphics-kit","assets":"https://reuters-graphics.github.io/docs_graphics-kit/cdn"},
@@ -33,7 +33,7 @@
 					error: null,
 					nodes: [
 						import("https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/__layout.svelte-949fb38c.js"),
-						import("https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-2175bdfa.js")
+						import("https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-37237bce.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -94,7 +94,7 @@
 </ul><hr><section class="graphic wide svelte-1ikla4c"><h5 class="svelte-1ikla4c">Video walk-through ▶️</h5>
   <div class="embed-container svelte-1ikla4c"><iframe src="https://www.youtube.com/embed/VTtDTiuY2w4" title="YouTube video player" frameborder="0" allowfullscreen class="svelte-1ikla4c"></iframe></div>
 </section><div style="margin: -2rem 0 2rem;"><blockquote><p><strong>Tip</strong>: This video is a complete intro to writing Svelte in our new graphics kit from the ground up by writing a simple before &amp; after image slider. It’s a longer video, but if you’re coming in fresh to Svelte and the concept of components, it’s a good spot to start.</p>
-<p>💡 <strong>You’ll follow along more easily if you’ve checked out the first 3 - 4 sections of the <a href="https://svelte.dev/tutorial/basics" rel="nofollow">official Svelte tutorial</a>.</strong></p></blockquote></div><hr><h2 id="whats-a-component"><a class="heading-link" href="#whats-a-component">What’s a “component”?</a></h2><img src="https://reuters-graphics.github.io/docs_graphics-kit/cdn/images/illos/parts-of-a-page.jpeg" alt="Components are parts of a page"><p>If you’ve gone through any of the <a href="https://svelte.dev/tutorial/basics" rel="nofollow">Svelte tutorial</a>, you’ll know pages in Svelte (and React, Vue and basically any modern JS framework) are made up of <strong>components</strong>.</p><p>While you <em>could</em> write your page as a single, massive component, when you’re just starting out, it’s useful to think of components as the <em>separable parts of your page</em>.</p><p>So, for example, a typical graphics page could be composed of the following components:</p><ul><li>Your headline</li>
+<p>💡 <strong>You’ll follow along more easily if you’ve checked out the first 3 - 4 sections of the <a href="https://svelte.dev/tutorial/basics" rel="nofollow">official Svelte tutorial</a>.</strong></p></blockquote></div><hr><h2 id="whats-a-component"><a class="heading-link" href="#whats-a-component">What’s a “component”?</a></h2><img src="https://reuters-graphics.github.io/docs_graphics-kit/cdn/images/illos/what-is.jpg" alt="Components are parts of a page"><p>If you’ve gone through any of the <a href="https://svelte.dev/tutorial/basics" rel="nofollow">Svelte tutorial</a>, you’ll know pages in Svelte (and React, Vue and basically any modern JS framework) are made up of <strong>components</strong>.</p><p>While you <em>could</em> write your page as a single, massive component, when you’re just starting out, it’s useful to think of components as the <em>separable parts of your page</em>.</p><p>So, for example, a typical graphics page could be composed of the following components:</p><ul><li>Your headline</li>
 <li>A photo</li>
 <li>Some text</li>
 <li>A graphic</li>
@@ -105,7 +105,7 @@
 + BodyText
 + Chart
 + BodyText
-+ Referrals</code><!-- HTML_TAG_END --></pre><h2 id="parts-of-a-svelte-component"><a class="heading-link" href="#parts-of-a-svelte-component">Parts of a Svelte component</a></h2><p>Svelte components include not only have all the component’s html but also any JS and SCSS needed for the component all in a single file. This structure makes it easy to work on parts of your page in isolation and encourage strong organization in your project.</p><p><img src="https://user-images.githubusercontent.com/12295494/140011258-66cfc5c2-d2d2-4318-b84b-352b8c7b806d.jpg" title="Structure of a svelte component"></p><h2 id="props"><a class="heading-link" href="#props">Props</a></h2><p>At it’s core, reusability of a component is driven by these things called “props”, which can be really powerful once we learn how to think about them. Let’s dive in.</p><p>What if I told you you’ve already been using props without calling them that?</p><p>First, let me start with some jargon.</p><p><img src="https://user-images.githubusercontent.com/12295494/140307702-f5f8d06d-1beb-48ff-b547-167425b197db.jpg" title="Jargon"></p><p><img src="https://user-images.githubusercontent.com/12295494/140307683-74727a36-b8e2-45d9-b204-9e42d179f876.jpg" title="JS in HTML"></p><p>Now, to explain what props are:</p><p><img src="https://user-images.githubusercontent.com/12295494/140307709-3e9c0b53-cac6-4568-92a8-03e71701f02c.jpg" title="Props"></p><h2 id="structuring-your-components-directory"><a class="heading-link" href="#structuring-your-components-directory">Structuring your component’s directory</a></h2><p>Once you know what components your page needs, it’s a good idea to structure each component within the <code>lib/</code> directory:</p><pre class="language-bash"><!-- HTML_TAG_START --><code class="language-bash">src/
++ Referrals</code><!-- HTML_TAG_END --></pre><h2 id="parts-of-a-svelte-component"><a class="heading-link" href="#parts-of-a-svelte-component">Parts of a Svelte component</a></h2><p>Svelte components include not only have all the component’s html but also any JS and SCSS needed for the component all in a single file. This structure makes it easy to work on parts of your page in isolation and encourage strong organization in your project.</p><img src="https://reuters-graphics.github.io/docs_graphics-kit/cdn/images/illos/structure-of-a-component.jpg" alt="Structure of a svelte component"><h2 id="props"><a class="heading-link" href="#props">Props</a></h2><p>At it’s core, reusability of a component is driven by these things called “props”, which can be really powerful once we learn how to think about them. Let’s dive in.</p><p>First, let me start with some jargon.</p><img src="https://reuters-graphics.github.io/docs_graphics-kit/cdn/images/illos/one-simple-jargon.jpg" alt="Jargon"><img src="https://reuters-graphics.github.io/docs_graphics-kit/cdn/images/illos/js-in-html.jpg" alt="JS in HTML"><p>Now, to explain what props are:</p><img src="https://reuters-graphics.github.io/docs_graphics-kit/cdn/images/illos/props-passing-down.jpg" alt="Props"><h2 id="structuring-your-components-directory"><a class="heading-link" href="#structuring-your-components-directory">Structuring your component’s directory</a></h2><p>Once you know what components your page needs, it’s a good idea to structure each component within the <code>lib/</code> directory:</p><pre class="language-bash"><!-- HTML_TAG_START --><code class="language-bash">src/
   lib/
     components/
       Headline.svelte 👈

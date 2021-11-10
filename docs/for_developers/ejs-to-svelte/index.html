@@ -9,17 +9,17 @@
 
 		
 
-		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-cd6cd4c3.js">
+		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-eb99a37f.js">
 		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/chunks/vendor-ac126d1d.js">
 		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/chunks/preload-helper-58936509.js">
 		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/__layout.svelte-949fb38c.js">
-		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-2175bdfa.js">
+		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-37237bce.js">
 		<link rel="stylesheet" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/assets/start-c446e5f0.css">
 		<link rel="stylesheet" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/assets/vendor-0825bdaf.css">
 		<link rel="stylesheet" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/assets/pages/__layout.svelte-8058701c.css">
 
 		<script type="module">
-			import { start } from "https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-cd6cd4c3.js";
+			import { start } from "https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-eb99a37f.js";
 			start({
 				target: document.querySelector("#svelte-app"),
 				paths: {"base":"/docs_graphics-kit","assets":"https://reuters-graphics.github.io/docs_graphics-kit/cdn"},
@@ -33,7 +33,7 @@
 					error: null,
 					nodes: [
 						import("https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/__layout.svelte-949fb38c.js"),
-						import("https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-2175bdfa.js")
+						import("https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-37237bce.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -87,9 +87,9 @@
   <div class="page-content svelte-1lnzjhs"><article class="container-fluid markdown-body">
 
 <section class="wide"><h1 id="transitioning-from-ejs-to-svelte"><a class="heading-link" href="#transitioning-from-ejs-to-svelte">Transitioning from EJS to Svelte</a></h1><p>This doc includes some examples of how basic things you may have done in the previous rig using EJS can be done in Svelte.</p><blockquote><p>💡 <strong>Pro tip:</strong> You can install <a href="https://marketplace.visualstudio.com/items?itemName=fivethree.vscode-svelte-snippets" rel="nofollow">Svelte snippets</a> in VSCode, which will suggest simple code blocks as you write and should help you while you’re learning.</p>
-</blockquote><h2 id="loops"><a class="heading-link" href="#loops">Loops</a></h2><p><img src="https://user-images.githubusercontent.com/12295494/140286773-97eeb3e4-f3fa-427f-a426-1735b0723528.jpg" title="for-loop"></p><p><a href="https://svelte.dev/tutorial/each-blocks" rel="nofollow">📖 Read the docs: each blocks</a></p><pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token each"><span class="token punctuation">&#123;</span><span class="token keyword">#each</span> <span class="token language-javascript">someArray </span><span class="token keyword">as</span> <span class="token language-javascript">item<span class="token punctuation">&#125;</span></span></span>
+</blockquote><h2 id="templates-vs-components"><a class="heading-link" href="#templates-vs-components">Templates vs Components</a></h2><img src="https://reuters-graphics.github.io/docs_graphics-kit/cdn/images/illos/split.jpg" alt="Split"><h2 id="loops"><a class="heading-link" href="#loops">Loops</a></h2><img src="https://reuters-graphics.github.io/docs_graphics-kit/cdn/images/illos/for-loop.jpg" alt="for-loop"><p><a href="https://svelte.dev/tutorial/each-blocks" rel="nofollow">📖 Read the docs: each blocks</a></p><pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token each"><span class="token punctuation">&#123;</span><span class="token keyword">#each</span> <span class="token language-javascript">someArray </span><span class="token keyword">as</span> <span class="token language-javascript">item<span class="token punctuation">&#125;</span></span></span>
   <span class="token comment">&lt;!-- Use item --></span>
-<span class="token each"><span class="token punctuation">&#123;</span><span class="token keyword">/each</span><span class="token punctuation">&#125;</span></span></code><!-- HTML_TAG_END --></pre><h2 id="conditionals"><a class="heading-link" href="#conditionals">Conditionals</a></h2><p><img src="https://user-images.githubusercontent.com/12295494/140286794-3b4210a0-125d-4526-9615-cf45b5557afd.jpg" title="if-else"></p><p><a href="https://svelte.dev/tutorial/if-blocks" rel="nofollow">📖 Read the docs: if blocks</a></p><pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token language-javascript"><span class="token punctuation">&#123;</span>#<span class="token keyword">if</span> someCondition <span class="token operator">===</span> <span class="token boolean">true</span><span class="token punctuation">&#125;</span></span>
+<span class="token each"><span class="token punctuation">&#123;</span><span class="token keyword">/each</span><span class="token punctuation">&#125;</span></span></code><!-- HTML_TAG_END --></pre><h2 id="conditionals"><a class="heading-link" href="#conditionals">Conditionals</a></h2><img src="https://reuters-graphics.github.io/docs_graphics-kit/cdn/images/illos/if-else.jpg" alt="if-else"><p><a href="https://svelte.dev/tutorial/if-blocks" rel="nofollow">📖 Read the docs: if blocks</a></p><pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token language-javascript"><span class="token punctuation">&#123;</span>#<span class="token keyword">if</span> someCondition <span class="token operator">===</span> <span class="token boolean">true</span><span class="token punctuation">&#125;</span></span>
   <span class="token comment">&lt;!-- ... --></span>
 <span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token operator">:</span><span class="token keyword">else</span> <span class="token keyword">if</span> anotherCondition <span class="token operator">===</span> <span class="token boolean">true</span><span class="token punctuation">&#125;</span></span>
   <span class="token comment">&lt;!-- ... --></span>
