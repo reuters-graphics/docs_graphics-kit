@@ -9,17 +9,17 @@
 
 		
 
-		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-fe10701c.js">
+		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-927fc465.js">
 		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/chunks/vendor-ac126d1d.js">
 		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/chunks/preload-helper-58936509.js">
 		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/__layout.svelte-949fb38c.js">
-		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-99e68008.js">
+		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-9060fa6c.js">
 		<link rel="stylesheet" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/assets/start-c446e5f0.css">
 		<link rel="stylesheet" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/assets/vendor-0825bdaf.css">
 		<link rel="stylesheet" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/assets/pages/__layout.svelte-8058701c.css">
 
 		<script type="module">
-			import { start } from "https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-fe10701c.js";
+			import { start } from "https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-927fc465.js";
 			start({
 				target: document.querySelector("#svelte-app"),
 				paths: {"base":"/docs_graphics-kit","assets":"https://reuters-graphics.github.io/docs_graphics-kit/cdn"},
@@ -33,7 +33,7 @@
 					error: null,
 					nodes: [
 						import("https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/__layout.svelte-949fb38c.js"),
-						import("https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-99e68008.js")
+						import("https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-9060fa6c.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -92,7 +92,7 @@
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> Headline <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Headline</span> <span class="token attr-name">hed</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>My title<span class="token punctuation">"</span></span> <span class="token attr-name">dek</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>The beginning of a beautiful page<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code><!-- HTML_TAG_END --></pre><h3 id="slots"><a class="heading-link" href="#slots">Slots</a></h3><p>One important way our components are written to offer you even more flexibility is through <a href="https://svelte.dev/tutorial/slots" rel="nofollow">slots</a>.</p><p>Be sure to check out the <a href="https://svelte.dev/tutorial/slots" rel="nofollow">official tutorial</a> to understand how slots – and especially, <a href="https://svelte.dev/tutorial/named-slots" rel="nofollow"><em>named</em> slots</a> – work, but let’s also go through a very common example to see how much power slots give you to customize the elements and styles in the component.</p><p>Take a look a closer look at the <a href="https://reuters-graphics.github.io/graphics-svelte-components/components/headline" rel="nofollow">Headline</a> component, which allows you to pass your own elements through several named slots.</p><p>For example, a crown image can be passed like this:</p><pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Headline</span> <span class="token attr-name">hed</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>My title<span class="token punctuation">"</span></span> <span class="token attr-name">dek</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>The beginning of a beautiful page<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code><!-- HTML_TAG_END --></pre><h3 id="slots"><a class="heading-link" href="#slots">Slots</a></h3><p>One important way our components are written to offer you even more flexibility is through <a href="https://svelte.dev/tutorial/slots" rel="nofollow">slots</a>.</p><p>Be sure to check out the <a href="https://svelte.dev/tutorial/slots" rel="nofollow">official tutorial</a> to understand how slots – and especially, <a href="https://svelte.dev/tutorial/named-slots" rel="nofollow"><em>named</em> slots</a> – work, but let’s also go through a very common example to see how much power slots give you to customize the elements and styles in the component.</p><p>Take a closer look at the <a href="https://reuters-graphics.github.io/graphics-svelte-components/components/headline" rel="nofollow">Headline</a> component, which allows you to pass your own elements through several named slots.</p><p>For example, a crown image can be passed like this:</p><pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> Headline <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 
@@ -112,7 +112,7 @@
   img</span> <span class="token punctuation">&#123;</span>
     <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
   <span class="token punctuation">&#125;</span>
-</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span></code><!-- HTML_TAG_END --></pre><p>But we don’t have to pass just an image to this slot. Remember, <strong>slots are just placeholders</strong> for whatever elements go in particular spot – in this case, something that goes directly above the headline.</p><p>So if we want to put something other than an image in its place, we can and are can style that however we like as well!</p><pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span></code><!-- HTML_TAG_END --></pre><p>But we don’t have to pass just an image to this slot. Remember, <strong>slots are just placeholders</strong> for whatever elements go in particular spot – in this case, something that goes directly above the headline.</p><p>So if we want to put something other than an image in its place, we can and can style that however we like as well!</p><pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> Headline <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 
