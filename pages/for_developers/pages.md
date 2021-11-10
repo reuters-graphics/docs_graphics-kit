@@ -1,12 +1,12 @@
 ---
-title: Making pages
+title: Making more pages & embeds
 published: true
 order: 15
 ---
 
 ::: section wide
 
-# Making pages
+# Making more pages & embeds
 
 The graphics kit improves on our previous [graphics rig](https://github.com/reuters-graphics/bluprint_graphics-rig/) by letting you build _multiple_ pages and embeds so you can build full-fledged newsapps or projects with several graphics components that make sense as individual embeds for media clients.
 
