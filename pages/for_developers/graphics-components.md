@@ -38,7 +38,7 @@ One important way our components are written to offer you even more flexibility 
 
 Be sure to check out the [official tutorial](https://svelte.dev/tutorial/slots) to understand how slots -- and especially, [_named_ slots](https://svelte.dev/tutorial/named-slots) -- work, but let's also go through a very common example to see how much power slots give you to customize the elements and styles in the component.
 
-Take a look a closer look at the [Headline](https://reuters-graphics.github.io/graphics-svelte-components/components/headline) component, which allows you to pass your own elements through several named slots.
+Take a closer look at the [Headline](https://reuters-graphics.github.io/graphics-svelte-components/components/headline) component, which allows you to pass your own elements through several named slots.
 
 For example, a crown image can be passed like this:
 
@@ -74,7 +74,7 @@ In this case we've passed an image to the slot, and we can also style that image
 
 But we don't have to pass just an image to this slot. Remember, **slots are just placeholders** for whatever elements go in particular spot -- in this case, something that goes directly above the headline.
 
-So if we want to put something other than an image in its place, we can and are can style that however we like as well!
+So if we want to put something other than an image in its place, we can and can style that however we like as well!
 
 ```svelte
 <script>
