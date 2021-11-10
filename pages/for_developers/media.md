@@ -80,6 +80,15 @@ Use inline styles to set CSS styles with your media files.
 <div
   style="{`background-image: url(${getPath('images/my-image.jpg')});`}"
 ></div>
+
+<style lang="scss">
+  div {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
 ```
 
 ... or ...
@@ -92,6 +101,15 @@ Use inline styles to set CSS styles with your media files.
 <div
   style="{`background-image: url(${`${assets}/images/my-image.jpg`});`}"
 ></div>
+
+<style lang="scss">
+  div {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
 ```
 
 :::
