@@ -10,7 +10,7 @@ I think a good first one is: https://graphics.reuters.com/AFGHANISTAN-CONFLICT/z
 
 2. The google doc for my "new rig version" of the project is [here](https://docs.google.com/document/d/1V8dr9bO8ZDbePOZDzYNYPwZnmk7oSSlyhwKftJzmwXI/edit). Feel free to tally if you get stuck somewhere.
 
-3. The repo is [here]()
+3. The repo is [here]("https://github.com/reuters-graphics/kabul-blast-new-rig")
 
 ---
 
