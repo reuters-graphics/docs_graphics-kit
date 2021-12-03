@@ -69,7 +69,7 @@ Now, for the header graphic, we'll have to edit the `Page.svelte` (what we've be
 <Headline section="{content.Kicker}" hed="{content.Hed}" dek="{content.Dek}">...
 ```
 
-We'll have to manually add in an ai2svelte component like so, just above the <Headline> component:
+We'll have to manually add in an ai2svelte component like so, just above the `<Headline>` component:
 
 ```svelte
 {#await fetchComponent('locator_airport')}
