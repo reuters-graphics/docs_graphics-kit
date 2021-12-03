@@ -1,3 +1,7 @@
+<script>
+  import { getPath } from '$utils/statics';
+</script>
+
 Let's try to rebuild an already existing Reuters graphics project in the new rig.
 
 I think a good first one is: https://graphics.reuters.com/AFGHANISTAN-CONFLICT/zjvqkkdqzvx/
@@ -10,7 +14,7 @@ I think a good first one is: https://graphics.reuters.com/AFGHANISTAN-CONFLICT/z
 
 2. The google doc for my "new rig version" of the project is [here](https://docs.google.com/document/d/1V8dr9bO8ZDbePOZDzYNYPwZnmk7oSSlyhwKftJzmwXI/edit). Feel free to tally if you get stuck somewhere.
 
-3. The repo is [here]("https://github.com/reuters-graphics/kabul-blast-new-rig")
+3. The repo is [here](https://github.com/reuters-graphics/kabul-blast-new-rig)
 
 ---
 
@@ -18,7 +22,7 @@ Before we get into actually writing code, let's look a the project and "think in
 
 <img src="{getPath('images/illos/kabul-components.jpg')}" alt="Kabul page's components"/>
 
-First we'll create a new blank project. Select yes for the Google Doc question. If you're unsure how to do that, check out [Quickstart]("https://reuters-graphics.github.io/docs_graphics-kit/for_developers/quickstart")
+First we'll create a new blank project. Select yes for the Google Doc question. If you're unsure how to do that, check out [Quickstart](https://reuters-graphics.github.io/docs_graphics-kit/for_developers/quickstart)
 
 The google doc that was created for me is
 
@@ -36,7 +40,7 @@ Then start to edit the text. I just copy pasted the text from the story and past
 
 **NOTE**: You will face an issue where the text you paste into the doc will show up as not having the paragraphs and appear as one big chunk. To fix that, just hit the enter key after each paragraph.
 
-Now we come to the first graphic. Download the file called "blast_site.ai" from the Dropbox and put it in your project-files folder. Then run the ai2svelte script froom Illustrator. If you're unsure of how to do that, check the [ai docs]("https://reuters-graphics.github.io/docs_graphics-kit/for_developers/ai")
+Now we come to the first graphic. Download the file called "blast_site.ai" from the Dropbox and put it in your project-files folder. Then run the ai2svelte script froom Illustrator. If you're unsure of how to do that, check the [ai docs](https://reuters-graphics.github.io/docs_graphics-kit/for_developers/ai)
 
 Run the ai2svelte script for all other ai files as well.
 
@@ -80,6 +84,6 @@ We've successfully migrated an old project to the new rig, without too much of a
 
 1. For your first few projects, try to draw boxes around what you think the "components" of the page are. Once you get clarity on that, writing code will be easier. Remember: syntax is useless jargon, hence unimportant. What's important is that you can "think in components".
 
-2. ai2html settings have to be changed as in the docs [here]("https://reuters-graphics.github.io/docs_graphics-kit/for_developers/ai")
+2. ai2html settings have to be changed as in the docs [here](https://reuters-graphics.github.io/docs_graphics-kit/for_developers/ai)
 
 3. The default new doc has stuff that you might not need, so feel free to remove things from it. But perhaps move it all below to the end after the ":ignore" tag.
