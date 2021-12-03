@@ -8,6 +8,8 @@ order: 8
   import { getPath } from '$utils/statics';
 </script>
 
+::: section wide
+
 Let's try to rebuild an already existing Reuters graphics project in the new rig.
 
 I think a good first one is: <https://graphics.reuters.com/AFGHANISTAN-CONFLICT/zjvqkkdqzvx/>
@@ -93,3 +95,5 @@ We've successfully migrated an old project to the new rig, without too much of a
 2. ai2html settings have to be changed as in the docs [here](https://reuters-graphics.github.io/docs_graphics-kit/for_developers/ai)
 
 3. The default new doc has stuff that you might not need, so feel free to remove things from it. But perhaps move it all below to the end after the ":ignore" tag.
+
+:::
