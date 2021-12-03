@@ -1,3 +1,9 @@
+---
+published: false
+title: Migrating an old rig project to the new rig
+order: 8
+---
+
 <script>
   import { getPath } from '$utils/statics';
 </script>
