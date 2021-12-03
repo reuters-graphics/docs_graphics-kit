@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: Migrating an old rig project to the new rig
 order: 8
 ---
