@@ -10,11 +10,11 @@ order: 8
 
 Let's try to rebuild an already existing Reuters graphics project in the new rig.
 
-I think a good first one is: https://graphics.reuters.com/AFGHANISTAN-CONFLICT/zjvqkkdqzvx/
+I think a good first one is: <https://graphics.reuters.com/AFGHANISTAN-CONFLICT/zjvqkkdqzvx/>
 
 ---
 
-### Prequisites:
+### Prequisites
 
 1. All the ai files for this project are [here](<https://www.dropbox.com/work/GRAPHICS all Staff/Scarr%2C Simon/Kabul blasts/new-rig-version/>)
 
@@ -69,7 +69,7 @@ Now, for the header graphic, we'll have to edit the `Page.svelte` (what we've be
 <Headline section="{content.Kicker}" hed="{content.Hed}" dek="{content.Dek}">...
 ```
 
-We'll have to manually add in an ai2svelte component like so, just above the <Headline> component:
+We'll have to manually add in an ai2svelte component like so, just above the `<Headline />` component:
 
 ```svelte
 {#await fetchComponent('locator_airport')}
