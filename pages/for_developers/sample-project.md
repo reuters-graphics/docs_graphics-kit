@@ -10,7 +10,7 @@ order: 8
 
 ::: section wide
 
-{title}
+# {title}
 
 Let's try to rebuild an already existing Reuters graphics project in the new kit.
 
