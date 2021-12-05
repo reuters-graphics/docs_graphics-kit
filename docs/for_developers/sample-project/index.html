@@ -9,17 +9,17 @@
 
 		
 
-		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-f273c09b.js">
+		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-ee22d00a.js">
 		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/chunks/vendor-ac126d1d.js">
 		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/chunks/preload-helper-58936509.js">
 		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/__layout.svelte-949fb38c.js">
-		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-a28ee0a8.js">
+		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-1821664b.js">
 		<link rel="stylesheet" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/assets/start-c446e5f0.css">
 		<link rel="stylesheet" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/assets/vendor-0825bdaf.css">
 		<link rel="stylesheet" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/assets/pages/__layout.svelte-8058701c.css">
 
 		<script type="module">
-			import { start } from "https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-f273c09b.js";
+			import { start } from "https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-ee22d00a.js";
 			start({
 				target: document.querySelector("#svelte-app"),
 				paths: {"base":"/docs_graphics-kit","assets":"https://reuters-graphics.github.io/docs_graphics-kit/cdn"},
@@ -33,7 +33,7 @@
 					error: null,
 					nodes: [
 						import("https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/__layout.svelte-949fb38c.js"),
-						import("https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-a28ee0a8.js")
+						import("https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-1821664b.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -87,7 +87,7 @@
       </ul></div>
   <div class="page-content svelte-1lnzjhs"><article class="container-fluid markdown-body">
 
-<section class="wide"><p>Migrating an old rig project to the new kit</p><p>Let’s try to rebuild an already existing Reuters graphics project in the new kit.</p><p>I think a good first one is: <a href="https://graphics.reuters.com/AFGHANISTAN-CONFLICT/zjvqkkdqzvx/" rel="nofollow">https://graphics.reuters.com/AFGHANISTAN-CONFLICT/zjvqkkdqzvx/</a></p><hr><h3 id="prequisites"><a class="heading-link" href="#prequisites">Prequisites</a></h3><ol><li><p>All the ai files for this project are <a href="https://www.dropbox.com/work/GRAPHICS%20all%20Staff/Scarr%2C%20Simon/Kabul%20blasts/new-rig-version/" rel="nofollow">here</a></p></li>
+<section class="wide"><h1 id="title"><a class="heading-link" href="#title">Migrating an old rig project to the new kit</a></h1><p>Let’s try to rebuild an already existing Reuters graphics project in the new kit.</p><p>I think a good first one is: <a href="https://graphics.reuters.com/AFGHANISTAN-CONFLICT/zjvqkkdqzvx/" rel="nofollow">https://graphics.reuters.com/AFGHANISTAN-CONFLICT/zjvqkkdqzvx/</a></p><hr><h3 id="prequisites"><a class="heading-link" href="#prequisites">Prequisites</a></h3><ol><li><p>All the ai files for this project are <a href="https://www.dropbox.com/work/GRAPHICS%20all%20Staff/Scarr%2C%20Simon/Kabul%20blasts/new-rig-version/" rel="nofollow">here</a></p></li>
 <li><p>The google doc for my “new kit version” of the project is <a href="https://docs.google.com/document/d/1V8dr9bO8ZDbePOZDzYNYPwZnmk7oSSlyhwKftJzmwXI/edit" rel="nofollow">here</a>. Feel free to tally if you get stuck somewhere.</p></li>
 <li><p>The repo is <a href="https://github.com/reuters-graphics/kabul-blast-new-rig" rel="nofollow">here</a></p></li>
 </ol><hr><p>Before we get into actually writing code, let’s look a the project and “think in components” for a bit.</p><img src="https://reuters-graphics.github.io/docs_graphics-kit/cdn/images/illos/kabul-components.jpg" alt="Kabul page's components"><p>First we’ll create a new blank project. Select yes for the Google Doc question. If you’re unsure how to do that, check out <a href="https://reuters-graphics.github.io/docs_graphics-kit/for_developers/quickstart" rel="nofollow">Quickstart</a></p><p>The google doc that was created for me is</p><p>First thing you shouuld do is take a look at <code>Page.svelte</code> in the src/lib folder.</p><p>Also simultaneously open the google doc that was created. You’ll see by default a number of blocks are added to the doc like text, photo, ai2svelte, ai-scroller. We will need all of them except “ai-scroller”. So go ahead and delete that whole block from the doc.</p><p>Now run <code>yarn get-google</code> from the terminal to see the updated page with the scroller removed.</p><p>Now go to the top of the google doc and change out the Hed, Dek, Kicker etc to be the same as the Kabul page:</p><img src="https://reuters-graphics.github.io/docs_graphics-kit/cdn/images/illos/kabul-hed-edit.jpg" alt="Edit the google doc for the Kabul page"><p>Then start to edit the text. I just copy pasted the text from the story and pasted the text till the first graphic of the airport from the satellite.</p><p><strong>NOTE</strong>: You will face an issue where the text you paste into the doc will show up as not having the paragraphs and appear as one big chunk. To fix that, just hit the enter key after each paragraph.</p><p>Now we come to the first graphic. Download the file called “blast_site.ai” from the Dropbox and put it in your project-files folder. Then run the ai2svelte script froom Illustrator. If you’re unsure of how to do that, check the <a href="https://reuters-graphics.github.io/docs_graphics-kit/for_developers/ai" rel="nofollow">ai docs</a></p><p>Run the ai2svelte script for all other ai files as well.</p><p>Once you have the story text and ai2html blocks inserted (refer to my google doc for how to do that), we can take a look at how to put the header graphic and also how to limig the size of all the graphics to a sane width.</p><p>Let’s get the sizing out of the way first: What I’ve done is set a max-width of 1250px on all ai graphics, except the one in the header, which has the id “locator_airport”.</p><p>So we can do the same in our main.scss:</p><pre class="language-scss"><!-- HTML_TAG_START --><code class="language-scss">.<span class="token property">ai2svelte-container</span><span class="token punctuation">:</span><span class="token function">not</span><span class="token punctuation">(</span>#locator_airport<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
