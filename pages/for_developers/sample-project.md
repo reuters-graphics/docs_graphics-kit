@@ -1,6 +1,6 @@
 ---
 published: true
-title: Migrating an old rig project to the new rig
+title: Migrating an old rig project to the new kit
 order: 8
 ---
 
@@ -10,7 +10,9 @@ order: 8
 
 ::: section wide
 
-Let's try to rebuild an already existing Reuters graphics project in the new rig.
+{title}
+
+Let's try to rebuild an already existing Reuters graphics project in the new kit.
 
 I think a good first one is: <https://graphics.reuters.com/AFGHANISTAN-CONFLICT/zjvqkkdqzvx/>
 
@@ -20,7 +22,7 @@ I think a good first one is: <https://graphics.reuters.com/AFGHANISTAN-CONFLICT/
 
 1. All the ai files for this project are [here](<https://www.dropbox.com/work/GRAPHICS all Staff/Scarr%2C Simon/Kabul blasts/new-rig-version/>)
 
-2. The google doc for my "new rig version" of the project is [here](https://docs.google.com/document/d/1V8dr9bO8ZDbePOZDzYNYPwZnmk7oSSlyhwKftJzmwXI/edit). Feel free to tally if you get stuck somewhere.
+2. The google doc for my "new kit version" of the project is [here](https://docs.google.com/document/d/1V8dr9bO8ZDbePOZDzYNYPwZnmk7oSSlyhwKftJzmwXI/edit). Feel free to tally if you get stuck somewhere.
 
 3. The repo is [here](https://github.com/reuters-graphics/kabul-blast-new-rig)
 
@@ -88,7 +90,7 @@ We'll have to manually add in an ai2svelte component like so, just above the `<H
 
 And.. that's it!
 
-We've successfully migrated an old project to the new rig, without too much of a hassle. To sum up, here's the key things to keep in mind when creating a project in the new rig as a newbie:
+We've successfully migrated an old project to the new kit, without too much of a hassle. To sum up, here's the key things to keep in mind when creating a project in the new kit as a newbie:
 
 1. For your first few projects, try to draw boxes around what you think the "components" of the page are. Once you get clarity on that, writing code will be easier. Remember: syntax is useless jargon, hence unimportant. What's important is that you can "think in components".
 
