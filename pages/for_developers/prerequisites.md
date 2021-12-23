@@ -19,7 +19,7 @@ We strongly recommend using [VS Code](https://code.visualstudio.com/), which wil
 
 ## Node
 
-This rig requires a node version >= 14.16.0. We highly recommend using a node version manager so you can easily switch which version of node you want to use.
+This rig requires a node version >= 14.17.0. We highly recommend using a node version manager so you can easily switch which version of node you want to use.
 
 [n](https://github.com/tj/n) is a great option and can be installed easily on a mac using brew:
 
@@ -30,7 +30,7 @@ brew install n
 Once installed, you can use it to download and install any version of node:
 
 ```
-n 14.16.0
+n 14.17.0
 ```
 
 ## Svelte
