@@ -16,7 +16,7 @@ The graphics kit improves on our previous [graphics rig](https://github.com/reut
 
 ## How to make pages
 
-Public pages and embeds are both created in the `pages` directory. All pages are Svelte components. To create a new one, you'll add a new `.svelte` file in that directory.
+Public pages and embeds are both created in the `pages` directory. All pages are Svelte components. To create a new one, you'll add a new `.svelte` file in that directory. (You should generally use slug-case like `my-page.svelte` instead of `MyPage.svelte`.)
 
 ```
 pages/
