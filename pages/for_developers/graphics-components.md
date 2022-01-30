@@ -12,7 +12,7 @@ order: 8
 
 # Using Reuters Graphics Components
 
-Many common components you'll need to make graphics pages are pre-written for you in our [Reuters Graphics Svelte components library](https://github.com/reuters-graphics/graphics-svelte-components).
+Many common components you'll need to make graphics pages are pre-written for you in our [Reuters Graphics Svelte components library](https://reuters-graphics.github.io/graphics-svelte-components/).
 
 Check out the [demo site](https://reuters-graphics.github.io/graphics-svelte-components/) for a list of the components available and docs on how to use them.
 
