@@ -8,15 +8,15 @@ order: 15
 
 # Making more pages & embeds
 
-The graphics kit improves on our previous [graphics rig](https://github.com/reuters-graphics/bluprint_graphics-rig/) by letting you build _multiple_ pages and embeds so you can build full-fledged newsapps or projects with several graphics components that make sense as individual embeds for media clients.
+The graphics kit improves on our previous [graphics rig](https://github.com/reuters-graphics/bluprint_graphics-rig/) by letting you build _multiple_ pages and embeds so you can build multipage newsapps or projects with several embeds for media clients.
 
-- [How to make pages](#how-to-make-pages)
+- [How to make pages and embeds](#how-to-make-pages-and-embeds)
 - [Public pages](#public-pages)
 - [Embeds](#embeds)
 
-## How to make pages
+## How to make pages and embeds
 
-Public pages and embeds are both created in the `pages` directory. All pages are Svelte components. To create a new one, you'll add a new `.svelte` file in that directory. (You should generally use slug-case like `my-page.svelte` instead of `MyPage.svelte`.)
+Public pages and embeds are both created in the `pages/` directory. All pages are Svelte components. To create a new one, you'll add a new `.svelte` file in that directory. (You should use slug-case like `my-page.svelte` instead of `MyPage.svelte`.)
 
 ```
 pages/
@@ -24,8 +24,20 @@ pages/
     en/
       chart.svelte
       page.svelte
+  my-second-page.svelte
   index.svelte
 ```
+
+Each Svelte component you place in `pages/` will create an HTML page, so the four components above will create these four pages:
+
+```
+📁 index.html
+📁 my-second-page/index.html
+📁 embeds/en/chart/index.html
+📁 embeds/en/page/index.html
+```
+
+When you publish your project, pages under the `embeds/` folder will be packaged as embeddable graphics in RNGS. Any other pages will be published alongside the main graphics page, `index.html`.
 
 ## Public pages
 
@@ -43,10 +55,10 @@ pages/
 ... would create pages like:
 
 ```
-/index.html
-/second-page/index.html
-/countries/usa/index.html
-/countries/uk/index.html
+📁 index.html
+📁 second-page/index.html
+📁 countries/usa/index.html
+📁 countries/uk/index.html
 ```
 
 Pages can also be named using dynamic parameters that can create multiple pages.
@@ -58,7 +70,7 @@ pages/
     [code].svelte
 ```
 
-Read more in [SvelteKit's docs](https://kit.svelte.dev/docs#routing-pages).
+Read more in [SvelteKit's docs](https://kit.svelte.dev/docs#routing-pages) about using dynamic parameters.
 
 #### SEO
 
@@ -79,11 +91,31 @@ When you create public pages, you should always add SEO to them. Using our pre-b
 />
 ```
 
+In most cases, you probably want to tie your SEO metadata to a Google doc like this:
+
+```svelte
+<script>
+  import { SEO } from '@reuters-graphics/graphics-svelte-components';
+  import content from '$locales/en/content.json'; // 👈 Adjust to path for doc in locales/ folder
+</script>
+
+<SEO
+  seoTitle="{content.SEOTitle}"
+  seoDescription="{content.SEODescription}"
+  shareTitle="{content.ShareTitle}"
+  shareDescription="{content.ShareDescription}"
+  shareImgPath="{content.ShareImgPath}"
+  lang="en"
+/>
+```
+
 ## Embeds
 
-Embeds for clients are more restricted in how they should be organized.
+Embeds for clients are more restricted than pubic pages in how they should be organized in the `pages/` directory.
 
-Embeds must be added to the `pages/embeds/` directory under a folder named with a valid locale code -- e.g., `en`, `es`, `de`, etc. -- and can be no levels deeper than that.
+Embed components must be added to the `pages/embeds/` directory under a folder named with a valid locale code -- e.g., `en`, `es`, `de`, etc. -- and can be no levels deeper than that.
+
+So embeds like...
 
 ```
 pages/
@@ -97,7 +129,17 @@ pages/
       map.svelte
 ```
 
-Each of these will create a corresponding [edition](https://github.com/reuters-graphics/bluprint_graphics-kit/issues/1#issuecomment-811891029) in RNGS for clients:
+... will create embed pages like ... 
+
+```
+📁 embeds/en/page/index.html
+📁 embeds/en/chart/index.html
+📁 embeds/en/map/index.html
+📁 embeds/es/page/index.html
+📁 embeds/es/map/index.html
+```
+
+... and, when uploaded, will create corresponding [editions](https://github.com/reuters-graphics/bluprint_graphics-kit/issues/1#issuecomment-811891029) in RNGS for clients like ...
 
 ```
 media-en-page
@@ -116,7 +158,7 @@ Always be sure to include Pym.js on embeddable pages. Using our pre-built compon
   import { PymChild } from '@reuters-graphics/graphics-svelte-components';
 </script>
 
-<PymChild />
+<PymChild polling={500} />
 ```
 
 :::
