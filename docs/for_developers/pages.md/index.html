@@ -9,17 +9,17 @@
 
 		
 
-		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-3b25ca2e.js">
+		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-26b2bc47.js">
 		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/chunks/vendor-ac126d1d.js">
 		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/chunks/preload-helper-58936509.js">
 		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/__layout.svelte-949fb38c.js">
-		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-2e1e6412.js">
+		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-f20904ab.js">
 		<link rel="stylesheet" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/assets/start-c446e5f0.css">
 		<link rel="stylesheet" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/assets/vendor-0825bdaf.css">
 		<link rel="stylesheet" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/assets/pages/__layout.svelte-8058701c.css">
 
 		<script type="module">
-			import { start } from "https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-3b25ca2e.js";
+			import { start } from "https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-26b2bc47.js";
 			start({
 				target: document.querySelector("#svelte-app"),
 				paths: {"base":"/docs_graphics-kit","assets":"https://reuters-graphics.github.io/docs_graphics-kit/cdn"},
@@ -33,7 +33,7 @@
 					error: null,
 					nodes: [
 						import("https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/__layout.svelte-949fb38c.js"),
-						import("https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-2e1e6412.js")
+						import("https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-f20904ab.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -87,26 +87,30 @@
       </ul></div>
   <div class="page-content svelte-1lnzjhs"><article class="container-fluid markdown-body">
 
-<section class="wide"><h1 id="making-more-pages--embeds"><a class="heading-link" href="#making-more-pages--embeds">Making more pages &amp; embeds</a></h1><p>The graphics kit improves on our previous <a href="https://github.com/reuters-graphics/bluprint_graphics-rig/" rel="nofollow">graphics rig</a> by letting you build <em>multiple</em> pages and embeds so you can build full-fledged newsapps or projects with several graphics components that make sense as individual embeds for media clients.</p><ul><li><a href="#how-to-make-pages">How to make pages</a></li>
+<section class="wide"><h1 id="making-more-pages--embeds"><a class="heading-link" href="#making-more-pages--embeds">Making more pages &amp; embeds</a></h1><p>The graphics kit improves on our previous <a href="https://github.com/reuters-graphics/bluprint_graphics-rig/" rel="nofollow">graphics rig</a> by letting you build <em>multiple</em> pages and embeds so you can build multipage newsapps or projects with several embeds for media clients.</p><ul><li><a href="#how-to-make-pages-and-embeds">How to make pages and embeds</a></li>
 <li><a href="#public-pages">Public pages</a></li>
 <li><a href="#embeds">Embeds</a></li>
-</ul><h2 id="how-to-make-pages"><a class="heading-link" href="#how-to-make-pages">How to make pages</a></h2><p>Public pages and embeds are both created in the <code>pages</code> directory. All pages are Svelte components. To create a new one, you’ll add a new <code>.svelte</code> file in that directory. (You should generally use slug-case like <code>my-page.svelte</code> instead of <code>MyPage.svelte</code>.)</p><pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">pages/
+</ul><h2 id="how-to-make-pages-and-embeds"><a class="heading-link" href="#how-to-make-pages-and-embeds">How to make pages and embeds</a></h2><p>Public pages and embeds are both created in the <code>pages/</code> directory. All pages are Svelte components. To create a new one, you’ll add a new <code>.svelte</code> file in that directory. (You should use slug-case like <code>my-page.svelte</code> instead of <code>MyPage.svelte</code>.)</p><pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">pages/
   embeds/
     en/
       chart.svelte
       page.svelte
-  index.svelte</code><!-- HTML_TAG_END --></pre><h2 id="public-pages"><a class="heading-link" href="#public-pages">Public pages</a></h2><p>Public pages can be named whatever you like. The filename and directory structure will be used to create the page path. For example, a directory like this:</p><pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">pages/
+  my-second-page.svelte
+  index.svelte</code><!-- HTML_TAG_END --></pre><p>Each Svelte component you place in <code>pages/</code> will create an HTML page, so the four components above will create these four pages:</p><pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">📁 index.html
+📁 my-second-page/index.html
+📁 embeds/en/chart/index.html
+📁 embeds/en/page/index.html</code><!-- HTML_TAG_END --></pre><p>When you publish your project, pages under the <code>embeds/</code> folder will be packaged as embeddable graphics in RNGS. Any other pages will be published alongside the main graphics page, <code>index.html</code>.</p><h2 id="public-pages"><a class="heading-link" href="#public-pages">Public pages</a></h2><p>Public pages can be named whatever you like. The filename and directory structure will be used to create the page path. For example, a directory like this:</p><pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">pages/
   index.svelte
   second-page.svelte
   countries/
     usa.svelte
-    uk.svelte</code><!-- HTML_TAG_END --></pre><p>… would create pages like:</p><pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">/index.html
-/second-page/index.html
-/countries/usa/index.html
-/countries/uk/index.html</code><!-- HTML_TAG_END --></pre><p>Pages can also be named using dynamic parameters that can create multiple pages.</p><pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">pages/
+    uk.svelte</code><!-- HTML_TAG_END --></pre><p>… would create pages like:</p><pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">📁 index.html
+📁 second-page/index.html
+📁 countries/usa/index.html
+📁 countries/uk/index.html</code><!-- HTML_TAG_END --></pre><p>Pages can also be named using dynamic parameters that can create multiple pages.</p><pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">pages/
   index.svelte
   countries/
-    [code].svelte</code><!-- HTML_TAG_END --></pre><p>Read more in <a href="https://kit.svelte.dev/docs#routing-pages" rel="nofollow">SvelteKit’s docs</a>.</p><h4 id="seo"><a class="heading-link" href="#seo">SEO</a></h4><p>When you create public pages, you should always add SEO to them. Using our pre-built <a href="https://reuters-graphics.github.io/graphics-svelte-components/components/seo" rel="nofollow">SEO component</a> is the easiest way. Add it to your page component with the metadata you want for that page.</p><pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+    [code].svelte</code><!-- HTML_TAG_END --></pre><p>Read more in <a href="https://kit.svelte.dev/docs#routing-pages" rel="nofollow">SvelteKit’s docs</a> about using dynamic parameters.</p><h4 id="seo"><a class="heading-link" href="#seo">SEO</a></h4><p>When you create public pages, you should always add SEO to them. Using our pre-built <a href="https://reuters-graphics.github.io/graphics-svelte-components/components/seo" rel="nofollow">SEO component</a> is the easiest way. Add it to your page component with the metadata you want for that page.</p><pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> <span class="token constant">SEO</span> <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 
@@ -117,7 +121,19 @@
   <span class="token attr-name">shareDescription</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>My share description<span class="token punctuation">"</span></span>
   <span class="token attr-name">shareImgPath</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>images/reuters-graphics.jpg<span class="token punctuation">"</span></span>
   <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span>
-<span class="token punctuation">/></span></span></code><!-- HTML_TAG_END --></pre><h2 id="embeds"><a class="heading-link" href="#embeds">Embeds</a></h2><p>Embeds for clients are more restricted in how they should be organized.</p><p>Embeds must be added to the <code>pages/embeds/</code> directory under a folder named with a valid locale code – e.g., <code>en</code>, <code>es</code>, <code>de</code>, etc. – and can be no levels deeper than that.</p><pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">pages/
+<span class="token punctuation">/></span></span></code><!-- HTML_TAG_END --></pre><p>In most cases, you probably want to tie your SEO metadata to a Google doc like this:</p><pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> <span class="token constant">SEO</span> <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
+  <span class="token keyword">import</span> content <span class="token keyword">from</span> <span class="token string">'$locales/en/content.json'</span><span class="token punctuation">;</span> <span class="token comment">// 👈 Adjust to path for doc in locales/ folder</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SEO</span>
+  <span class="token attr-name">seoTitle="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>content<span class="token punctuation">.</span>SEOTitle<span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span>
+  <span class="token attr-name">seoDescription="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>content<span class="token punctuation">.</span>SEODescription<span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span>
+  <span class="token attr-name">shareTitle="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>content<span class="token punctuation">.</span>ShareTitle<span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span>
+  <span class="token attr-name">shareDescription="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>content<span class="token punctuation">.</span>ShareDescription<span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span>
+  <span class="token attr-name">shareImgPath="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>content<span class="token punctuation">.</span>ShareImgPath<span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span>
+  <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span>
+<span class="token punctuation">/></span></span></code><!-- HTML_TAG_END --></pre><h2 id="embeds"><a class="heading-link" href="#embeds">Embeds</a></h2><p>Embeds for clients are more restricted than pubic pages in how they should be organized in the <code>pages/</code> directory.</p><p>Embed components must be added to the <code>pages/embeds/</code> directory under a folder named with a valid locale code – e.g., <code>en</code>, <code>es</code>, <code>de</code>, etc. – and can be no levels deeper than that.</p><p>So embeds like…</p><pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">pages/
   embeds/
     en/
       page.svelte
@@ -125,7 +141,11 @@
       map.svelte
     es/
       page.svelte
-      map.svelte</code><!-- HTML_TAG_END --></pre><p>Each of these will create a corresponding <a href="https://github.com/reuters-graphics/bluprint_graphics-kit/issues/1#issuecomment-811891029" rel="nofollow">edition</a> in RNGS for clients:</p><pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">media-en-page
+      map.svelte</code><!-- HTML_TAG_END --></pre><p>… will create embed pages like … </p><pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">📁 embeds/en/page/index.html
+📁 embeds/en/chart/index.html
+📁 embeds/en/map/index.html
+📁 embeds/es/page/index.html
+📁 embeds/es/map/index.html</code><!-- HTML_TAG_END --></pre><p>… and, when uploaded, will create corresponding <a href="https://github.com/reuters-graphics/bluprint_graphics-kit/issues/1#issuecomment-811891029" rel="nofollow">editions</a> in RNGS for clients like …</p><pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">media-en-page
 media-en-chart
 media-en-map
 media-es-page
@@ -133,7 +153,7 @@ media-es-map</code><!-- HTML_TAG_END --></pre><h4 id="pym"><a class="heading-lin
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> PymChild <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PymChild</span> <span class="token punctuation">/></span></span></code><!-- HTML_TAG_END --></pre></section></article></div>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PymChild</span> <span class="token attr-name">polling=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token number">500</span><span class="token punctuation">&#125;</span></span> <span class="token punctuation">/></span></span></code><!-- HTML_TAG_END --></pre></section></article></div>
 </div>
 
 
