@@ -161,4 +161,27 @@ Always be sure to include Pym.js on embeddable pages. Using our pre-built compon
 <PymChild polling={500} />
 ```
 
+#### Preview images
+
+By default, each embed you create will use the project's preview image, which gets displayed to clients in Connect. Ideally, though, your embed should display a preview of the graphic it actually contains.
+
+If your embed includes an `og:image` metatag with a URL to a local image, the graphics kit will package that as a `_gfxpreview.png` file in the embed's RNGS edition, which overrides the default preview image for your embed in Connect. The easiest way to include one is to use our `SEO` component and pass it the path to a specific preview image for your embed.
+
+```svelte
+<script>
+  import { SEO } from '@reuters-graphics/graphics-svelte-components';
+</script>
+
+<SEO
+  seoTitle="{content.SEOTitle}"
+  seoDescription="{content.SEODescription}"
+  shareTitle="{content.ShareTitle}"
+  shareDescription="{content.ShareDescription}"
+  shareImgPath="images/my-embed-preview.jpg" 👈
+  lang="en"
+/>
+```
+
+> 📌 **Note:** The SEO and share titles and descriptions aren't that important for embeds, though you do have to pass _something_ to those props. Also note that the analytics that are normally injected into graphics pages via the `SEO` component are turned off for embeds, so you don't need to worry about them either.
+
 :::
