@@ -173,10 +173,10 @@ If your embed includes an `og:image` metatag with a URL to a local image, the gr
 </script>
 
 <SEO
-  seoTitle="{content.SEOTitle}"
-  seoDescription="{content.SEODescription}"
-  shareTitle="{content.ShareTitle}"
-  shareDescription="{content.ShareDescription}"
+  seoTitle="My embed title"
+  seoDescription="My embed description"
+  shareTitle="My embed title"
+  shareDescription="My embed description"
   shareImgPath="images/my-embed-preview.jpg" 👈
   lang="en"
 />
