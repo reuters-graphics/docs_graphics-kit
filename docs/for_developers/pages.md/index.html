@@ -9,17 +9,17 @@
 
 		
 
-		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-26b2bc47.js">
+		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-8d2b8972.js">
 		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/chunks/vendor-ac126d1d.js">
 		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/chunks/preload-helper-58936509.js">
 		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/__layout.svelte-949fb38c.js">
-		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-f20904ab.js">
+		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-c2a2ec84.js">
 		<link rel="stylesheet" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/assets/start-c446e5f0.css">
 		<link rel="stylesheet" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/assets/vendor-0825bdaf.css">
 		<link rel="stylesheet" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/assets/pages/__layout.svelte-8058701c.css">
 
 		<script type="module">
-			import { start } from "https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-26b2bc47.js";
+			import { start } from "https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-8d2b8972.js";
 			start({
 				target: document.querySelector("#svelte-app"),
 				paths: {"base":"/docs_graphics-kit","assets":"https://reuters-graphics.github.io/docs_graphics-kit/cdn"},
@@ -33,7 +33,7 @@
 					error: null,
 					nodes: [
 						import("https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/__layout.svelte-949fb38c.js"),
-						import("https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-f20904ab.js")
+						import("https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-c2a2ec84.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -153,7 +153,18 @@ media-es-map</code><!-- HTML_TAG_END --></pre><h4 id="pym"><a class="heading-lin
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> PymChild <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PymChild</span> <span class="token attr-name">polling=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token number">500</span><span class="token punctuation">&#125;</span></span> <span class="token punctuation">/></span></span></code><!-- HTML_TAG_END --></pre></section></article></div>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PymChild</span> <span class="token attr-name">polling=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token number">500</span><span class="token punctuation">&#125;</span></span> <span class="token punctuation">/></span></span></code><!-- HTML_TAG_END --></pre><h4 id="preview-images"><a class="heading-link" href="#preview-images">Preview images</a></h4><p>By default, each embed you create will use the project’s preview image, which gets displayed to clients in Connect. Ideally, though, your embed should display a preview of the graphic it actually contains.</p><p>If your embed includes an <code>og:image</code> metatag with a URL to a local image, the graphics kit will package that as a <code>_gfxpreview.png</code> file in the embed’s RNGS edition, which overrides the default preview image for your embed in Connect. The easiest way to include one is to use our <code>SEO</code> component and pass it the path to a specific preview image for your embed.</p><pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> <span class="token constant">SEO</span> <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@reuters-graphics/graphics-svelte-components'</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SEO</span>
+  <span class="token attr-name">seoTitle="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>content<span class="token punctuation">.</span>SEOTitle<span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span>
+  <span class="token attr-name">seoDescription="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>content<span class="token punctuation">.</span>SEODescription<span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span>
+  <span class="token attr-name">shareTitle="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>content<span class="token punctuation">.</span>ShareTitle<span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span>
+  <span class="token attr-name">shareDescription="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>content<span class="token punctuation">.</span>ShareDescription<span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span>
+  <span class="token attr-name">shareImgPath</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>images/my-embed-preview.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">👈</span>
+  <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span>
+<span class="token punctuation">/></span></span></code><!-- HTML_TAG_END --></pre><blockquote><p>📌 <strong>Note:</strong> The SEO and share titles and descriptions aren’t that important for embeds, though you do have to pass <em>something</em> to those props. Also note that the analytics that are normally injected into graphics pages via the <code>SEO</code> component are turned off for embeds, so you don’t need to worry about them either.</p></blockquote></section></article></div>
 </div>
 
 
