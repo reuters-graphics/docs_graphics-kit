@@ -9,17 +9,17 @@
 
 		
 
-		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-8d2b8972.js">
+		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-a371d869.js">
 		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/chunks/vendor-ac126d1d.js">
 		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/chunks/preload-helper-58936509.js">
 		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/__layout.svelte-949fb38c.js">
-		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-c2a2ec84.js">
+		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-a8d7613a.js">
 		<link rel="stylesheet" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/assets/start-c446e5f0.css">
 		<link rel="stylesheet" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/assets/vendor-0825bdaf.css">
 		<link rel="stylesheet" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/assets/pages/__layout.svelte-8058701c.css">
 
 		<script type="module">
-			import { start } from "https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-8d2b8972.js";
+			import { start } from "https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-a371d869.js";
 			start({
 				target: document.querySelector("#svelte-app"),
 				paths: {"base":"/docs_graphics-kit","assets":"https://reuters-graphics.github.io/docs_graphics-kit/cdn"},
@@ -33,7 +33,7 @@
 					error: null,
 					nodes: [
 						import("https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/__layout.svelte-949fb38c.js"),
-						import("https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-c2a2ec84.js")
+						import("https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-a8d7613a.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -158,10 +158,10 @@ media-es-map</code><!-- HTML_TAG_END --></pre><h4 id="pym"><a class="heading-lin
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SEO</span>
-  <span class="token attr-name">seoTitle="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>content<span class="token punctuation">.</span>SEOTitle<span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span>
-  <span class="token attr-name">seoDescription="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>content<span class="token punctuation">.</span>SEODescription<span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span>
-  <span class="token attr-name">shareTitle="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>content<span class="token punctuation">.</span>ShareTitle<span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span>
-  <span class="token attr-name">shareDescription="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>content<span class="token punctuation">.</span>ShareDescription<span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span>
+  <span class="token attr-name">seoTitle</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>My embed title<span class="token punctuation">"</span></span>
+  <span class="token attr-name">seoDescription</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>My embed description<span class="token punctuation">"</span></span>
+  <span class="token attr-name">shareTitle</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>My embed title<span class="token punctuation">"</span></span>
+  <span class="token attr-name">shareDescription</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>My embed description<span class="token punctuation">"</span></span>
   <span class="token attr-name">shareImgPath</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>images/my-embed-preview.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">👈</span>
   <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span>
 <span class="token punctuation">/></span></span></code><!-- HTML_TAG_END --></pre><blockquote><p>📌 <strong>Note:</strong> The SEO and share titles and descriptions aren’t that important for embeds, though you do have to pass <em>something</em> to those props. Also note that the analytics that are normally injected into graphics pages via the <code>SEO</code> component are turned off for embeds, so you don’t need to worry about them either.</p></blockquote></section></article></div>
