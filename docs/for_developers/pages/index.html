@@ -9,17 +9,17 @@
 
 		
 
-		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-a371d869.js">
-		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/chunks/vendor-ac126d1d.js">
+		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-c9fe0fb5.js">
+		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/chunks/vendor-9aac3077.js">
 		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/chunks/preload-helper-58936509.js">
-		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/__layout.svelte-949fb38c.js">
-		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-a8d7613a.js">
+		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/__layout.svelte-d068925c.js">
+		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-0b19e561.js">
 		<link rel="stylesheet" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/assets/start-c446e5f0.css">
-		<link rel="stylesheet" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/assets/vendor-0825bdaf.css">
-		<link rel="stylesheet" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/assets/pages/__layout.svelte-8058701c.css">
+		<link rel="stylesheet" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/assets/vendor-4ab6d437.css">
+		<link rel="stylesheet" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/assets/pages/__layout.svelte-085c28ed.css">
 
 		<script type="module">
-			import { start } from "https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-a371d869.js";
+			import { start } from "https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-c9fe0fb5.js";
 			start({
 				target: document.querySelector("#svelte-app"),
 				paths: {"base":"/docs_graphics-kit","assets":"https://reuters-graphics.github.io/docs_graphics-kit/cdn"},
@@ -32,8 +32,8 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/__layout.svelte-949fb38c.js"),
-						import("https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-a8d7613a.js")
+						import("https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/__layout.svelte-d068925c.js"),
+						import("https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-0b19e561.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -73,7 +73,7 @@
           </li><li class="svelte-1lnzjhs"><a href="/docs_graphics-kit/for_developers/google-docs-and-sheets" class="svelte-1lnzjhs">Google docs and sheets</a>
           </li><li class="svelte-1lnzjhs"><a href="/docs_graphics-kit/for_developers/translation" class="svelte-1lnzjhs">Translation</a>
           </li><li class="svelte-1lnzjhs"><a href="/docs_graphics-kit/for_developers/ai" class="svelte-1lnzjhs">AI graphics</a>
-          </li><li class="svelte-1lnzjhs"><a href="/docs_graphics-kit/for_developers/flats" class="svelte-1lnzjhs">Flat files</a>
+          </li><li class="svelte-1lnzjhs"><a href="/docs_graphics-kit/for_developers/statics" class="svelte-1lnzjhs">Static files</a>
           </li><li class="svelte-1lnzjhs active"><a href="/docs_graphics-kit/for_developers/pages" class="svelte-1lnzjhs">Making more pages &amp; embeds</a>
           </li><li class="svelte-1lnzjhs"><a href="/docs_graphics-kit/for_developers/svelte-faqs" class="svelte-1lnzjhs">Svelte FAQs</a>
           </li><li class="svelte-1lnzjhs"><a href="/docs_graphics-kit/for_developers/snippets" class="svelte-1lnzjhs">Snippets</a>
@@ -133,7 +133,20 @@
   <span class="token attr-name">shareDescription="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>content<span class="token punctuation">.</span>ShareDescription<span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span>
   <span class="token attr-name">shareImgPath="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>content<span class="token punctuation">.</span>ShareImgPath<span class="token punctuation">&#125;</span></span><span class="token attr-name">"</span>
   <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span>
-<span class="token punctuation">/></span></span></code><!-- HTML_TAG_END --></pre><h2 id="embeds"><a class="heading-link" href="#embeds">Embeds</a></h2><p>Embeds for clients are more restricted than pubic pages in how they should be organized in the <code>pages/</code> directory.</p><p>Embed components must be added to the <code>pages/embeds/</code> directory under a folder named with a valid locale code – e.g., <code>en</code>, <code>es</code>, <code>de</code>, etc. – and can be no levels deeper than that.</p><p>So embeds like…</p><pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">pages/
+<span class="token punctuation">/></span></span></code><!-- HTML_TAG_END --></pre><h4 id="linking-between-pages"><a class="heading-link" href="#linking-between-pages">Linking between pages</a></h4><p>To link between pages, make sure you use Svelte’s special <a href="https://kit.svelte.dev/docs/modules#$app-paths-base" rel="nofollow"><code>base</code></a> module and prefix it to the paths to your pages in any links. That will make sure the path is correct in development, on the preview page and when the project is published to RNGS.</p><p>For example, say you have translated pages like this:</p><pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">pages/
+  index.svelte
+  fr/
+    index.svelte
+  de/
+    index.svelte</code><!-- HTML_TAG_END --></pre><p>… you’d use <code>base</code> in links like…</p><pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> base <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'$app/paths'</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>base<span class="token punctuation">&#125;</span></span>/<span class="token attr-name">"</span><span class="token punctuation">></span></span>English<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>base<span class="token punctuation">&#125;</span></span>/<span class="token attr-name">fr</span>/<span class="token attr-name">"</span><span class="token punctuation">></span></span>Français<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href="</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>base<span class="token punctuation">&#125;</span></span>/<span class="token attr-name">de</span>/<span class="token attr-name">"</span><span class="token punctuation">></span></span>Deutsch<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nav</span><span class="token punctuation">></span></span></code><!-- HTML_TAG_END --></pre><h2 id="embeds"><a class="heading-link" href="#embeds">Embeds</a></h2><p>Embeds for clients are more restricted than pubic pages in how they should be organized in the <code>pages/</code> directory.</p><p>Embed components must be added to the <code>pages/embeds/</code> directory under a folder named with a valid locale code – e.g., <code>en</code>, <code>es</code>, <code>de</code>, etc. – and can be no levels deeper than that.</p><p>So embeds like…</p><pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">pages/
   embeds/
     en/
       page.svelte
@@ -171,7 +184,7 @@ media-es-map</code><!-- HTML_TAG_END --></pre><h4 id="pym"><a class="heading-lin
 
 
 
-			<script type="application/json" data-type="svelte-data" data-url="/docs.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"[{\"slug\":\"contributing\u002Fdocs\",\"title\":\"The docs\",\"published\":true,\"order\":21},{\"slug\":\"contributing\u002Fkit\",\"title\":\"The Kit\",\"published\":true,\"order\":20},{\"slug\":\"for_clients\u002Fusing-the-kit\",\"title\":\"Using the Kit\",\"published\":true,\"order\":1},{\"slug\":\"for_developers\u002Fai\",\"title\":\"AI graphics\",\"published\":true,\"order\":13},{\"slug\":\"for_developers\u002Fautomated-publishing\",\"title\":\"Automated publishing\",\"published\":true,\"order\":19},{\"slug\":\"for_developers\u002Fcommands\",\"title\":\"CLI commands\",\"published\":true,\"order\":4},{\"slug\":\"for_developers\u002Fcomponents\",\"title\":\"Building with Svelte\",\"published\":true,\"order\":6},{\"slug\":\"for_developers\u002Fdata\",\"title\":\"Working with data\",\"published\":true,\"order\":10},{\"slug\":\"for_developers\u002Fdirectory\",\"title\":\"What's in it\",\"published\":true,\"order\":5},{\"slug\":\"for_developers\u002Fejs-to-svelte\",\"title\":\"Transitioning from EJS to Svelte\",\"published\":true,\"order\":7},{\"slug\":\"for_developers\u002Fflats\",\"title\":\"Flat files\",\"published\":true,\"order\":14},{\"slug\":\"for_developers\u002Fgoogle-docs-and-sheets\",\"title\":\"Google docs and sheets\",\"published\":true,\"order\":11},{\"slug\":\"for_developers\u002Fgraphics-components\",\"title\":\"Using Reuters Graphics Components\",\"published\":true,\"order\":8},{\"slug\":\"for_developers\u002Fmedia\",\"title\":\"Working with media files\",\"published\":true,\"order\":9},{\"slug\":\"for_developers\u002Fmetadata\",\"title\":\"Metadata\",\"published\":true,\"order\":18},{\"slug\":\"for_developers\u002Fpages\",\"title\":\"Making more pages & embeds\",\"published\":true,\"order\":15},{\"slug\":\"for_developers\u002Fprerequisites\",\"title\":\"Prereqs\",\"published\":true,\"order\":2},{\"slug\":\"for_developers\u002Fquickstart\",\"title\":\"Quickstart\",\"published\":true,\"order\":3},{\"slug\":\"for_developers\u002Fsample-project\",\"published\":true,\"title\":\"Migrating an old rig project to the new kit\",\"order\":8},{\"slug\":\"for_developers\u002Fsnippets\",\"title\":\"Snippets\",\"published\":true,\"order\":17},{\"slug\":\"for_developers\u002Fstyles\",\"title\":\"Styling pages\",\"published\":true,\"order\":8},{\"slug\":\"for_developers\u002Fsvelte-faqs\",\"title\":\"Svelte FAQs\",\"published\":true,\"order\":16},{\"slug\":\"for_developers\u002Ftranslation\",\"title\":\"Translation\",\"published\":true,\"order\":12}]"}</script>
+			<script type="application/json" data-type="svelte-data" data-url="/docs.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"[{\"slug\":\"contributing\u002Fdocs\",\"title\":\"The docs\",\"published\":true,\"order\":21},{\"slug\":\"contributing\u002Fkit\",\"title\":\"The Kit\",\"published\":true,\"order\":20},{\"slug\":\"for_clients\u002Fusing-the-kit\",\"title\":\"Using the Kit\",\"published\":true,\"order\":1},{\"slug\":\"for_developers\u002Fai\",\"title\":\"AI graphics\",\"published\":true,\"order\":13},{\"slug\":\"for_developers\u002Fautomated-publishing\",\"title\":\"Automated publishing\",\"published\":true,\"order\":19},{\"slug\":\"for_developers\u002Fcommands\",\"title\":\"CLI commands\",\"published\":true,\"order\":4},{\"slug\":\"for_developers\u002Fcomponents\",\"title\":\"Building with Svelte\",\"published\":true,\"order\":6},{\"slug\":\"for_developers\u002Fdata\",\"title\":\"Working with data\",\"published\":true,\"order\":10},{\"slug\":\"for_developers\u002Fdirectory\",\"title\":\"What's in it\",\"published\":true,\"order\":5},{\"slug\":\"for_developers\u002Fejs-to-svelte\",\"title\":\"Transitioning from EJS to Svelte\",\"published\":true,\"order\":7},{\"slug\":\"for_developers\u002Fgoogle-docs-and-sheets\",\"title\":\"Google docs and sheets\",\"published\":true,\"order\":11},{\"slug\":\"for_developers\u002Fgraphics-components\",\"title\":\"Using Reuters Graphics Components\",\"published\":true,\"order\":8},{\"slug\":\"for_developers\u002Fmedia\",\"title\":\"Working with media files\",\"published\":true,\"order\":9},{\"slug\":\"for_developers\u002Fmetadata\",\"title\":\"Metadata\",\"published\":true,\"order\":18},{\"slug\":\"for_developers\u002Fpages\",\"title\":\"Making more pages & embeds\",\"published\":true,\"order\":15},{\"slug\":\"for_developers\u002Fprerequisites\",\"title\":\"Prereqs\",\"published\":true,\"order\":2},{\"slug\":\"for_developers\u002Fquickstart\",\"title\":\"Quickstart\",\"published\":true,\"order\":3},{\"slug\":\"for_developers\u002Fsample-project\",\"published\":true,\"title\":\"Migrating an old rig project to the new kit\",\"order\":8},{\"slug\":\"for_developers\u002Fsnippets\",\"title\":\"Snippets\",\"published\":true,\"order\":17},{\"slug\":\"for_developers\u002Fstatics\",\"title\":\"Static files\",\"published\":true,\"order\":14},{\"slug\":\"for_developers\u002Fstyles\",\"title\":\"Styling pages\",\"published\":true,\"order\":8},{\"slug\":\"for_developers\u002Fsvelte-faqs\",\"title\":\"Svelte FAQs\",\"published\":true,\"order\":16},{\"slug\":\"for_developers\u002Ftranslation\",\"title\":\"Translation\",\"published\":true,\"order\":12}]"}</script>
 		
 		</div>
 	</body>

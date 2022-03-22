@@ -42,7 +42,7 @@ You can import JSON files from this directory using the `$locales` alias. For ex
 
 ### `media-assets/`
 
-This directory is where you can put assets for media clients like EPS and JPG flat graphics. Read more about structuring media assets to upload to the graphics server in the [flats](./flats.md) docs.
+This directory is where you can put assets for media clients like EPS and JPG flat graphics. Read more about structuring media assets to upload to the graphics server in the [statics](./statics.md) docs.
 
 ### `pages/`
 
