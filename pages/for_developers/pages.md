@@ -70,7 +70,7 @@ pages/
     [code].svelte
 ```
 
-Read more in [SvelteKit's docs](https://kit.svelte.dev/docs#routing-pages) about using dynamic parameters.
+Read more in [SvelteKit's docs](https://kit.svelte.dev/docs/routing#pages) about using dynamic parameters.
 
 #### SEO
 
@@ -111,7 +111,7 @@ In most cases, you probably want to tie your SEO metadata to a Google doc like t
 
 #### Linking between pages
 
-To link between pages, make sure you use Svelte's special [`base`](https://kit.svelte.dev/docs/modules#$app-paths-base) module and prefix it to the paths to your pages in any links. That will make sure the path is correct in development, on the preview page and when the project is published to RNGS.
+To link between pages, use SvelteKit's [`base`](https://kit.svelte.dev/docs/modules#$app-paths-base) module and prefix any links to your pages in a tags. That will make sure the path to each page is correct in development, on preview pages and when the project is published in the Graphics Server.
 
 For example, say you have translated pages like this:
 
@@ -124,7 +124,7 @@ pages/
     index.svelte
 ```
 
-... you'd use `base` in links like...
+... use `base` to prefix your links like...
 
 ```svelte
 <script>
