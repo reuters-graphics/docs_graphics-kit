@@ -9,17 +9,17 @@
 
 		
 
-		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-8ec2f0bd.js">
+		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-cc764a30.js">
 		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/chunks/vendor-ac126d1d.js">
 		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/chunks/preload-helper-58936509.js">
 		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/__layout.svelte-949fb38c.js">
-		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-c81e515a.js">
+		<link rel="modulepreload" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-821a45fb.js">
 		<link rel="stylesheet" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/assets/start-c446e5f0.css">
 		<link rel="stylesheet" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/assets/vendor-0825bdaf.css">
 		<link rel="stylesheet" href="https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/assets/pages/__layout.svelte-8058701c.css">
 
 		<script type="module">
-			import { start } from "https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-8ec2f0bd.js";
+			import { start } from "https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/start-cc764a30.js";
 			start({
 				target: document.querySelector("#svelte-app"),
 				paths: {"base":"/docs_graphics-kit","assets":"https://reuters-graphics.github.io/docs_graphics-kit/cdn"},
@@ -33,7 +33,7 @@
 					error: null,
 					nodes: [
 						import("https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/__layout.svelte-949fb38c.js"),
-						import("https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-c81e515a.js")
+						import("https://reuters-graphics.github.io/docs_graphics-kit/cdn/app/pages/[...slug].svelte-821a45fb.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -87,13 +87,31 @@
       </ul></div>
   <div class="page-content svelte-1lnzjhs"><article class="container-fluid markdown-body">
 
-<section class="wide"><h1 id="writing-styles"><a class="heading-link" href="#writing-styles">Writing styles</a></h1><p>There are two ways to write styles in this kit. The first – <em>and preferred</em> – way is to write styles <em>in</em> your Svelte components. The second is to create and import a global stylesheet.</p><ul><li><a href="#component-styles">Component styles</a><ul><li><a href="#scss">SCSS</a></li>
+<section class="wide"><h1 id="writing-styles"><a class="heading-link" href="#writing-styles">Writing styles</a></h1><p>There are two ways to write styles in this kit. The first is to write global styles. The second is to write styles <em>in</em> your Svelte components.</p><ul><li><a href="#global-styles">Global styles</a></li>
+<li><a href="#component-styles">Component styles</a><ul><li><a href="#scss">SCSS</a></li>
 <li><a href="#scoping-and-the-global-scss-operator">Scoping and the <code>:global</code> SCSS operator</a></li>
 <li><a href="#styles-from-javascript">Styles from JavaScript</a></li></ul></li>
-<li><a href="#global-styles">Global styles</a></li>
-</ul><section class="graphic wide svelte-1ikla4c"><h5 class="svelte-1ikla4c">Video walk-through ▶️</h5>
-  <div class="embed-container svelte-1ikla4c"><iframe src="https://www.youtube.com/embed/1ugiqcLETXw" title="YouTube video player" frameborder="0" allowfullscreen class="svelte-1ikla4c"></iframe></div>
-</section><h2 id="component-styles"><a class="heading-link" href="#component-styles">Component styles</a></h2><p>Generally, it’s better to write styles directly in your Svelte components because they will be automatically scoped to just the elements in your component and Svelte will also clean up any unused style rules by default, too. Read more <a href="https://svelte.dev/tutorial/styling" rel="nofollow">about styling in the Svelte docs</a>.</p><h3 id="scss"><a class="heading-link" href="#scss">SCSS</a></h3><p>Add a <code>lang</code> attibute to any style tags in your svelte components to use SCSS syntax.</p><pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+</ul><h2 id="global-styles"><a class="heading-link" href="#global-styles">Global styles</a></h2><p>You can write global styles in the <code>global.scss</code> stylesheet located in the <code>src/lib/styles/</code> directory. Styles you write here will override any defaults in our house style libraries.</p><pre class="language-scss"><!-- HTML_TAG_START --><code class="language-scss"><span class="token comment">// src/lib/styles/global.scss</span>
+
+<span class="token selector">section.body-text p </span><span class="token punctuation">&#123;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #666<span class="token punctuation">;</span>
+  <span class="token selector"><span class="token parent important">&amp;</span>.purple </span><span class="token punctuation">&#123;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> purple<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre><p>The kit already imports this stylesheet in all your pages and embeds.</p><p>If you want to create <em>other</em> global stylesheets – say to only apply to a particular page – simply create another <code>.scss</code> file and import it in the page that you want to apply it to (probably <em>after</em> any house lib imports).</p><pre class="language-scss"><!-- HTML_TAG_START --><code class="language-scss"><span class="token comment">// src/lib/styles/second.scss</span>
+<span class="token selector">body </span><span class="token punctuation">&#123;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> #333<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre><pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token comment">&lt;!-- pages/second-page.svelte --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token comment">// ...</span>
+  <span class="token keyword">import</span> <span class="token string">'@reuters-graphics/style-theme-eisbaer/scss/main.scss'</span><span class="token punctuation">;</span>
+  <span class="token keyword">import</span> <span class="token string">'$lib/styles/global.scss'</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code><!-- HTML_TAG_END --></pre><p>…and then import it and apply it using the <code>:global</code> SCSS operator:</p><pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token comment">&lt;!-- pages/index.svelte --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>scss<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">:global</span> <span class="token punctuation">&#123;</span>
+    <span class="token atrule"><span class="token rule">@import</span> <span class="token string">'../src/lib/styles/main.scss'</span><span class="token punctuation">;</span></span>
+  <span class="token punctuation">&#125;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span></code><!-- HTML_TAG_END --></pre><h2 id="component-styles"><a class="heading-link" href="#component-styles">Component styles</a></h2><p>It’s often better to write styles directly in your Svelte components because they will be automatically scoped to just the elements in your component so they don’t conflict with any other global styles. Svelte will also clean up any unused style rules by default, too. It also makes it easy to copy components between projects because the styles travel with the component code.</p><p>Read more <a href="https://svelte.dev/tutorial/styling" rel="nofollow">about styling in the Svelte docs</a>.</p><h3 id="scss"><a class="heading-link" href="#scss">SCSS</a></h3><p>Add a <code>lang</code> attibute to any style tags in your svelte components to use SCSS syntax.</p><pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>purple<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Lorem ipsum...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 
@@ -129,7 +147,10 @@
 <span class="token punctuation">&#125;</span>
 <span class="token selector">div.my-container.abc123xyz789 p span</span> <span class="token punctuation">&#123;</span>
   <span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre><h3 id="styles-from-javascript"><a class="heading-link" href="#styles-from-javascript">Styles from JavaScript</a></h3><p>If you want to use JavaScript values to style your components, you have a few options.</p><p>You can use Svelte’s <a href="https://svelte.dev/tutorial/classes" rel="nofollow">class directive</a> to set a class conditionally:</p><pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre><p><strong>Pro-tip:</strong> You’ll likely also want to silence Svelte’s internal warnings for unused styles so they don’t clutter up your terminal. Add this comment directly above your style tag to do it:</p><pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token comment">&lt;!-- svelte-ignore css-unused-selector --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>scss<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+  <span class="token comment">/* ... */</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span></code><!-- HTML_TAG_END --></pre><h3 id="styles-from-javascript"><a class="heading-link" href="#styles-from-javascript">Styles from JavaScript</a></h3><p>If you want to use JavaScript values to style your components, you have a few options.</p><p>You can use Svelte’s <a href="https://svelte.dev/tutorial/classes" rel="nofollow">class directive</a> to set a class conditionally:</p><pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">let</span> purple <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 
@@ -154,20 +175,6 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
   <span class="token selector">p</span> <span class="token punctuation">&#123;</span>
     <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--theme-color<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">&#125;</span>
-</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span></code><!-- HTML_TAG_END --></pre><h2 id="global-styles"><a class="heading-link" href="#global-styles">Global styles</a></h2><p>If you want to write styles that will apply across several components, you can create an SCSS file anywhere in the <code>src/</code> directory…</p><pre class="language-scss"><!-- HTML_TAG_START --><code class="language-scss"><span class="token comment">// src/lib/styles/main.scss</span>
-
-<span class="token selector">p.purple </span><span class="token punctuation">&#123;</span>
-  <span class="token property">color</span><span class="token punctuation">:</span> purple<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre><p>…and then import it and apply it using the <code>:global</code> SCSS operator:</p><pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token comment">&lt;!-- pages/index.svelte --></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>scss<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
-  <span class="token selector">:global</span> <span class="token punctuation">&#123;</span>
-    <span class="token atrule"><span class="token rule">@import</span> <span class="token string">'../src/lib/styles/main.scss'</span><span class="token punctuation">;</span></span>
-  <span class="token punctuation">&#125;</span>
-</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span></code><!-- HTML_TAG_END --></pre><p><strong>Pro-tip:</strong> You’ll likely also want to silence Svelte’s internal warnings for unused styles so they don’t clutter up your terminal:</p><pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token comment">&lt;!-- svelte-ignore css-unused-selector --></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>scss<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
-  <span class="token selector">:global</span> <span class="token punctuation">&#123;</span>
-    <span class="token atrule"><span class="token rule">@import</span> <span class="token string">'../src/lib/styles/main.scss'</span><span class="token punctuation">;</span></span>
   <span class="token punctuation">&#125;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span></code><!-- HTML_TAG_END --></pre></section></article></div>
 </div>
