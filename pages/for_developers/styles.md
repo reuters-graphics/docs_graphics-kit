@@ -47,19 +47,8 @@ body {
 <script>
   // ...
   import '@reuters-graphics/style-theme-eisbaer/scss/main.scss';
-  import '$lib/styles/global.scss';
+  import '$lib/styles/second.scss';
 </script>
-```
-
-...and then import it and apply it using the `:global` SCSS operator:
-
-```svelte
-<!-- pages/index.svelte -->
-<style lang="scss">
-  :global {
-    @import '../src/lib/styles/main.scss';
-  }
-</style>
 ```
 
 ## Component styles
