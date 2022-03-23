@@ -22,8 +22,8 @@
     "@babel/preset-env": "^7.15.6",
     "@reuters-graphics/eslint-config": "^0.0.2",
     "@reuters-graphics/graphics-bin": "^0.0.19",
-    "@sveltejs/adapter-static": "1.0.0-next.21",
-    "@sveltejs/kit": "1.0.0-next.195",
+    "@sveltejs/adapter-static": "1.0.0-next.29",
+    "@sveltejs/kit": "1.0.0-next.301",
     "autoprefixer": "^10.2.5",
     "eslint": "^7.24.0",
     "eslint-plugin-svelte3": "^3.2.1",
@@ -40,17 +40,17 @@
     "remark-abbr": "^1.4.1",
     "remark-containers": "^1.2.0",
     "remark-github": "^11.2.1",
-    "sass": "^1.43.2",
-    "svelte": "^3.44.0",
-    "svelte-preprocess": "^4.9.8"
+    "sass": "^1.49.0",
+    "svelte": "^3.46.0",
+    "svelte-preprocess": "^4.10.4"
   },
   "engines": {
-    "node": ">= 14.16.0"
+    "node": ">= 14.17.0"
   },
   "dependencies": {
     "@fortawesome/free-regular-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "@reuters-graphics/graphics-svelte-components": "^0.1.40",
+    "@reuters-graphics/graphics-svelte-components": "^0.3.4",
     "@reuters-graphics/style-theme-eisbaer": "^0.3.6",
     "lodash-es": "^4.17.21",
     "proper-url-join": "^2.1.1",

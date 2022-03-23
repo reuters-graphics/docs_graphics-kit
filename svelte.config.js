@@ -66,7 +66,6 @@ export default {
       routes: 'src/routes',
       template: 'src/template.html',
     },
-    target: '#svelte-app',
     vite: {
       build: { target: 'es2015' },
       server: {
@@ -81,14 +80,13 @@ export default {
         },
       },
       optimizeDeps: {
-        exclude: ['svelte-fa'],
+        exclude: ['svelte-fa', '@reuters-graphics/style-theme-eisbaer'],
         include: [
           'marked',
           'lodash-es',
           'pym.js',
           'classnames',
           'ua-parser-js',
-          '@reuters-graphics/graphics-svelte-components',
         ],
       },
     },

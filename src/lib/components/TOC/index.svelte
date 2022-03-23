@@ -5,23 +5,20 @@
   import Fa from 'svelte-fa/src/fa.svelte';
   import { faHome, faBars } from '@fortawesome/free-solid-svg-icons';
   import { onMount } from 'svelte';
+  import { afterNavigate } from '$app/navigation';
 
   export let docs;
 
   let showMobileMenu = false;
   let scrollContainer;
 
-  $: [groupedDocs, groupOrder] = orderDocs(docs, $page.path);
+  $: [groupedDocs, groupOrder] = orderDocs(docs, $page.url.pathname);
 
   const scrollTop = () => {
     scrollContainer.scrollTop = 0;
   };
 
-  onMount(() => {
-    window.addEventListener('sveltekit:navigation-end', scrollTop);
-    return () =>
-      window.removeEventListener('sveltekit:navigation-end', scrollTop);
-  });
+  afterNavigate(scrollTop);
 </script>
 
 <div class="page-container">
@@ -35,7 +32,7 @@
       <Fa fw icon="{faBars}" />
     </button>
     <ul class="home">
-      <li class:active="{$page.path === '/'}">
+      <li class:active="{$page.url.pathname === '/'}">
         <a href="{`${base}/`}"><Fa fw icon="{faHome}" /> Home</a>
       </li>
     </ul>

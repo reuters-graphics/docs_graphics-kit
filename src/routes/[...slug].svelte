@@ -1,13 +1,13 @@
 <script context="module">
   import slugifyPath from '$utils/slugify-path';
 
-  export async function load({ page }) {
+  export async function load({ url }) {
     const modules = import.meta.glob('./../../pages/**/*.md');
     let match;
 
     for (const [path, resolver] of Object.entries(modules)) {
       const slug = slugifyPath(path);
-      if (slug === slugifyPath(page.path)) {
+      if (slug === slugifyPath(url.pathname)) {
         match = { path, resolver };
         break;
       }
