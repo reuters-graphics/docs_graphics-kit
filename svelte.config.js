@@ -55,6 +55,8 @@ export default {
       assets: prod ? homepage + '/cdn' : '',
       base: prod ? getRootRelativePath(homepage) : '',
     },
+    prerender: { default: true, onError: 'continue' },
+    trailingSlash: 'always',
     adapter: adapter({
       pages: 'docs',
       assets: 'docs/cdn',

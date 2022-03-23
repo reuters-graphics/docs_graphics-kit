@@ -1,6 +1,7 @@
 <script context="module">
+  import { base } from '$app/paths';
   export const load = async ({ fetch }) => {
-    const docs = await fetch('/docs.json').then((res) => res.json());
+    const docs = await fetch(`${base}/docs.json`).then((res) => res.json());
     return { props: { docs } };
   };
 </script>
