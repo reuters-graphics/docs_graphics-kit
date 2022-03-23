@@ -4,27 +4,69 @@ published: true
 order: 8
 ---
 
-<script>
-  import YouTube from '$lib/components/YouTube/index.svelte';
-</script>
-
 ::: section wide
 
 # Writing styles
 
-There are two ways to write styles in this kit. The first -- _and preferred_ -- way is to write styles _in_ your Svelte components. The second is to create and import a global stylesheet.
+There are two ways to write styles in this kit. The first is to write global styles. The second is to write styles _in_ your Svelte components.
 
+- [Global styles](#global-styles)
 - [Component styles](#component-styles)
   - [SCSS](#scss)
   - [Scoping and the `:global` SCSS operator](#scoping-and-the-global-scss-operator)
   - [Styles from JavaScript](#styles-from-javascript)
-- [Global styles](#global-styles)
 
-<YouTube id="1ugiqcLETXw" />
+## Global styles
+
+You can write global styles in the `global.scss` stylesheet located in the `src/lib/styles/` directory. Styles you write here will override any defaults in our house style libraries.
+
+```SCSS
+// src/lib/styles/global.scss
+
+section.body-text p {
+  color: #666;
+  &.purple {
+    color: purple;
+  }
+}
+```
+
+The kit already imports this stylesheet in all your pages and embeds.
+
+If you want to create _other_ global stylesheets -- say to only apply to a particular page -- simply create another `.scss` file and import it in the page that you want to apply it to (probably _after_ any house lib imports).
+
+```scss
+// src/lib/styles/second.scss
+body {
+  background-color: #333;
+}
+```
+
+```svelte
+<!-- pages/second-page.svelte -->
+<script>
+  // ...
+  import '@reuters-graphics/style-theme-eisbaer/scss/main.scss';
+  import '$lib/styles/global.scss';
+</script>
+```
+
+...and then import it and apply it using the `:global` SCSS operator:
+
+```svelte
+<!-- pages/index.svelte -->
+<style lang="scss">
+  :global {
+    @import '../src/lib/styles/main.scss';
+  }
+</style>
+```
 
 ## Component styles
 
-Generally, it's better to write styles directly in your Svelte components because they will be automatically scoped to just the elements in your component and Svelte will also clean up any unused style rules by default, too. Read more [about styling in the Svelte docs](https://svelte.dev/tutorial/styling).
+It's often better to write styles directly in your Svelte components because they will be automatically scoped to just the elements in your component so they don't conflict with any other global styles. Svelte will also clean up any unused style rules by default, too. It also makes it easy to copy components between projects because the styles travel with the component code.
+
+Read more [about styling in the Svelte docs](https://svelte.dev/tutorial/styling).
 
 ### SCSS
 
@@ -90,6 +132,15 @@ div.my-container.abc123xyz789 p span {
 }
 ```
 
+**Pro-tip:** You'll likely also want to silence Svelte's internal warnings for unused styles so they don't clutter up your terminal. Add this comment directly above your style tag to do it:
+
+```svelte
+<!-- svelte-ignore css-unused-selector -->
+<style lang="scss">
+  /* ... */
+</style>
+```
+
 ### Styles from JavaScript
 
 If you want to use JavaScript values to style your components, you have a few options.
@@ -134,40 +185,6 @@ You can use Svelte's [class directive](https://svelte.dev/tutorial/classes) to s
 <style>
   p {
     color: var(--theme-color);
-  }
-</style>
-```
-
-## Global styles
-
-If you want to write styles that will apply across several components, you can create an SCSS file anywhere in the `src/` directory...
-
-```SCSS
-// src/lib/styles/main.scss
-
-p.purple {
-  color: purple;
-}
-```
-
-...and then import it and apply it using the `:global` SCSS operator:
-
-```svelte
-<!-- pages/index.svelte -->
-<style lang="scss">
-  :global {
-    @import '../src/lib/styles/main.scss';
-  }
-</style>
-```
-
-**Pro-tip:** You'll likely also want to silence Svelte's internal warnings for unused styles so they don't clutter up your terminal:
-
-```svelte
-<!-- svelte-ignore css-unused-selector -->
-<style lang="scss">
-  :global {
-    @import '../src/lib/styles/main.scss';
   }
 </style>
 ```
