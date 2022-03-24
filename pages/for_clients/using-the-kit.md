@@ -28,6 +28,28 @@ npm start
 
 Read more about how to make changes to the project's source code by reading the developer docs on this site.
 
+## Translating page content
+
+Most text content for pages is located in JSON files in the `locales/` directory of the project. Translating the text in `locales/en/content.json`, for example, and then rebuilding the project (see Building for self-hosting, below) will replace the text on the page in whatever language you choose.
+
+For example, you could translate the below text in English...
+
+```json
+{
+  "greeting": "Hello!"
+}
+```
+
+... into German, being sure **not** to translate the _keys_ in the JSON, just the values.
+
+```json
+{
+  "greeting": "Servus!"
+}
+```
+
+Some text content for things like annotations on individual charts may be located in components that live in the `src/lib/` directory. You can also edit this text within the code and rebuild the project to replace the text with your translation.
+
 ## Building for self-hosting
 
 When you're ready to publish the project, change the `homepage` prop in `package.json` to the URL where you'd like to host the files.
