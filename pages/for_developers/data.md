@@ -59,7 +59,7 @@ src/
     my-chart/
       index.svelte
       data.json 👈
-    Page.svelte
+    App.svelte
 ```
 
 Now you can import your data just like a regular module in the component that uses it:
@@ -107,16 +107,16 @@ To do that, we're going to go to the component in the `pages/` directory that de
 
 <!-- pages/index.svelte -->
 <script>
-  import Page from '$lib/Page.svelte';
+  import App from '$lib/App.svelte';
   // ...
 
   // 👇 Define a prop for this data
   export let myData;
 </script>
 
-<!-- 👇 Pass our data to the Page component, which can in turn pass it
+<!-- 👇 Pass our data to the App component, which can in turn pass it
 to any other components that need this data! -->
-<Page myData="{myData}" />
+<App myData="{myData}" />
 ```
 
 ## Fetching dynamic data

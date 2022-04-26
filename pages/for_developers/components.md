@@ -97,10 +97,10 @@ src/
         barchart.js   👈
         index.svelte  👈
       Map.svelte      👈
-    Page.svelte
+    App.svelte
 ```
 
-Now you can tie your components together in `Page.svelte` to follow your outline:
+Now you can tie your components together in `App.svelte` to follow your outline:
 
 ```svelte
 <script>
@@ -120,7 +120,7 @@ Now you can tie your components together in `Page.svelte` to follow your outline
 
 ## Driving components with Google docs
 
-In practice, we usually use Google docs to outline and layout our pages and to supply the text to our components. So when tying together your components, you may want to make them part of the block structure pre-written in `Page.svelte`. For example:
+In practice, we usually use Google docs to outline and layout our pages and to supply the text to our components. So when tying together your components, you may want to make them part of the block structure pre-written in `App.svelte`. For example:
 
 ```svelte
 <script>

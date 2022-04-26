@@ -67,7 +67,7 @@ So we can do the same in our main.scss:
 }
 ```
 
-Now, for the header graphic, we'll have to edit the `Page.svelte` (what we've been editing till now!) file in the place where it adds our headline:
+Now, for the header graphic, we'll have to edit the `App.svelte` (what we've been editing till now!) file in the place where it adds our headline:
 
 ```svelte
 <Headline section="{content.Kicker}" hed="{content.Hed}" dek="{content.Dek}">...
