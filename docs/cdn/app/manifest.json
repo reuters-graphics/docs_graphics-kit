@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-3d1b3fa6.js",
+    "file": "start-5f657ab5.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -48,7 +48,7 @@
     ]
   },
   "src/routes/[...slug].svelte": {
-    "file": "pages/_...slug_.svelte-358bf947.js",
+    "file": "pages/_...slug_.svelte-53ce8139.js",
     "src": "src/routes/[...slug].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -155,7 +155,7 @@
     ]
   },
   "pages/for_developers/components.md": {
-    "file": "chunks/components-a8b00694.js",
+    "file": "chunks/components-cc54026c.js",
     "src": "pages/for_developers/components.md",
     "isDynamicEntry": true,
     "imports": [
@@ -173,7 +173,7 @@
     ]
   },
   "pages/for_developers/data.md": {
-    "file": "chunks/data-f4c7f848.js",
+    "file": "chunks/data-7e9eac2c.js",
     "src": "pages/for_developers/data.md",
     "isDynamicEntry": true,
     "imports": [
@@ -256,7 +256,7 @@
     ]
   },
   "pages/for_developers/sample-project.md": {
-    "file": "chunks/sample-project-c6690c04.js",
+    "file": "chunks/sample-project-8b2e59f8.js",
     "src": "pages/for_developers/sample-project.md",
     "isDynamicEntry": true,
     "imports": [
