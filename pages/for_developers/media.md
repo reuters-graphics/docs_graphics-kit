@@ -29,36 +29,7 @@ src/
 
 When you reference media files, you should **always use absolute paths** (`https://graphics.reuters.com/.../my-file.jpg`), not relative paths (`./my-file.jpg`).
 
-So to use media files in your code, you need to prefix the path to them.
-
-You have two ways to do that:
-
-#### `getPath`
-
-Import our built-in `getPath` utility function and pass to it the path to your media file in the `src/statics/` directory.
-
-For example, say you have an image like this:
-
-```
-src/
-  statics/
-    images/
-      my-image.jpg
-```
-
-You'd use the `getPath` function like this:
-
-```svelte
-<script>
-  import { getPath } from '$utils/statics';
-</script>
-
-<img alt="" src="{getPath('images/my-image.jpg')}" />
-```
-
-#### `assets`
-
-You can also prefix the path yourself using SvelteKit's [built-in `assets` store](https://kit.svelte.dev/docs#modules-$app-paths):
+So to use media files in your code, you need to prefix the path to them using SvelteKit's [built-in `assets` store](https://kit.svelte.dev/docs#modules-$app-paths). Here's how:
 
 ```svelte
 <script>
@@ -71,27 +42,6 @@ You can also prefix the path yourself using SvelteKit's [built-in `assets` store
 ### Using media files in CSS
 
 Use inline styles to set CSS styles with your media files.
-
-```svelte
-<script>
-  import { getPath } from '$utils/statics';
-</script>
-
-<div
-  style="{`background-image: url(${getPath('images/my-image.jpg')});`}"
-></div>
-
-<style lang="scss">
-  div {
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-</style>
-```
-
-... or ...
 
 ```svelte
 <script>
