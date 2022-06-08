@@ -29,7 +29,7 @@ src/
 
 When you reference media files, you should **always use absolute paths** (`https://graphics.reuters.com/.../my-file.jpg`), not relative paths (`./my-file.jpg`).
 
-So to use media files in your code, you need to prefix the path to them using SvelteKit's [built-in `assets` store](https://kit.svelte.dev/docs#modules-$app-paths). Here's how:
+So to use media files in your code, you need to prefix the path to them using SvelteKit's [built-in `assets` store](https://kit.svelte.dev/docs/modules#$app-paths). Here's how:
 
 ```svelte
 <script>
