@@ -10,7 +10,8 @@ order: 9
 
 - [Where to put media files](#where-to-put-media-files)
 - [How to use media files in your code](#how-to-use-media-files-in-your-code)
-  - [Using media files in CSS](https://github.com/reuters-graphics/bluprint_graphics-kit/blob/master/docs/developers/media.md#using-media-files-in-css)
+  - [Using media files in component SCSS](https://github.com/reuters-graphics/bluprint_graphics-kit/blob/master/docs/developers/media.md#using-media-files-in-component-scss)
+  - [Using media files in global SCSS](https://github.com/reuters-graphics/bluprint_graphics-kit/blob/master/docs/developers/media.md#using-media-files-in-global-scss)
 
 ## Where to put media files
 
@@ -29,7 +30,7 @@ src/
 
 When you reference media files, you should **always use absolute paths** (`https://graphics.reuters.com/.../my-file.jpg`), not relative paths (`./my-file.jpg`).
 
-So to use media files in your code, you need to prefix the path to them using SvelteKit's [built-in `assets` store](https://kit.svelte.dev/docs/modules#$app-paths). Here's how:
+So to use media files in your component code, you need to prefix the path to them using SvelteKit's [built-in `assets` store](https://kit.svelte.dev/docs/modules#$app-paths). Here's how:
 
 ```svelte
 <script>
@@ -39,9 +40,9 @@ So to use media files in your code, you need to prefix the path to them using Sv
 <img alt="" src="{`${assets}/images/my-image.jpg`}" />
 ```
 
-### Using media files in CSS
+### Using media files in component SCSS
 
-Use inline styles to set CSS styles with your media files.
+Use inline styles to set SCSS styles with your media files.
 
 ```svelte
 <script>
@@ -60,6 +61,19 @@ Use inline styles to set CSS styles with your media files.
     background-size: cover;
   }
 </style>
+```
+
+### Using media files in global SCSS
+
+If you need to load media files in your global SCSS -- for example, to load a font for use across the page -- the kit will automatically resolve CSS `url()` path strings beginning with the `$assets` alias and create the correct absolute URL for you.
+
+```scss
+// src/lib/styles/global.scss
+
+@font-face {
+  font-family: myCustomFont;
+  src: url("$assets/fonts/myFont.woff2") format("woff2");
+}
 ```
 
 :::
