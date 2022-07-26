@@ -10,8 +10,8 @@ order: 9
 
 - [Where to put media files](#where-to-put-media-files)
 - [How to use media files in your code](#how-to-use-media-files-in-your-code)
-  - [Using media files in component SCSS](https://github.com/reuters-graphics/bluprint_graphics-kit/blob/master/docs/developers/media.md#using-media-files-in-component-scss)
-  - [Using media files in global SCSS](https://github.com/reuters-graphics/bluprint_graphics-kit/blob/master/docs/developers/media.md#using-media-files-in-global-scss)
+  - [Using media files in component SCSS](#using-media-files-in-component-scss)
+  - [Using media files in global SCSS](#using-media-files-in-global-scss)
 
 ## Where to put media files
 
