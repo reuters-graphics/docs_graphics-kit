@@ -8,7 +8,8 @@ import{S as D,i as N,s as Z,e as t,t as i,c as l,a as r,h as o,d as s,b as n,g a
       map-preview.jpg</code>`,p,J,u,x,T,m,O=`<code class="language-bash">pages/
   embeds/
     en/
-      chart.svelte
+      chart/
+        +page.svelte
 media-assets/
   en/
     chart/

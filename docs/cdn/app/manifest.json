@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-5cc44def.js",
+    "file": "start-1ec4b778.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -48,7 +48,7 @@
     ]
   },
   "src/routes/[...slug].svelte": {
-    "file": "pages/_...slug_.svelte-2d6ea667.js",
+    "file": "pages/_...slug_.svelte-24081622.js",
     "src": "src/routes/[...slug].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -131,7 +131,7 @@
     ]
   },
   "pages/for_developers/ai.md": {
-    "file": "chunks/ai-512c839d.js",
+    "file": "chunks/ai-621aa6c0.js",
     "src": "pages/for_developers/ai.md",
     "isDynamicEntry": true,
     "imports": [
@@ -155,21 +155,24 @@
     ]
   },
   "pages/for_developers/components.md": {
-    "file": "chunks/components-cc54026c.js",
+    "file": "chunks/components-68481ad4.js",
     "src": "pages/for_developers/components.md",
     "isDynamicEntry": true,
     "imports": [
       "_vendor-a9517919.js",
-      "_index-d413d163.js"
+      "_index-ab99ab32.js"
+    ],
+    "css": [
+      "assets/index.svelte_svelte_type_style_lang-598e202e.css"
     ]
   },
-  "_index-d413d163.js": {
-    "file": "chunks/index-d413d163.js",
+  "_index-ab99ab32.js": {
+    "file": "chunks/index-ab99ab32.js",
     "imports": [
       "_vendor-a9517919.js"
     ],
     "css": [
-      "assets/index-12a2e941.css"
+      "assets/index.svelte_svelte_type_style_lang-598e202e.css"
     ]
   },
   "pages/for_developers/data.md": {
@@ -181,12 +184,15 @@
     ]
   },
   "pages/for_developers/directory.md": {
-    "file": "chunks/directory-47333d0f.js",
+    "file": "chunks/directory-08a588c5.js",
     "src": "pages/for_developers/directory.md",
     "isDynamicEntry": true,
     "imports": [
       "_vendor-a9517919.js",
-      "_index-d413d163.js"
+      "_index-ab99ab32.js"
+    ],
+    "css": [
+      "assets/index.svelte_svelte_type_style_lang-598e202e.css"
     ]
   },
   "pages/for_developers/ejs-to-svelte.md": {
@@ -206,12 +212,14 @@
     ]
   },
   "pages/for_developers/graphics-components.md": {
-    "file": "chunks/graphics-components-e19973c8.js",
+    "file": "chunks/graphics-components-1a52689d.js",
     "src": "pages/for_developers/graphics-components.md",
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-a9517919.js",
-      "_index-d413d163.js"
+      "_vendor-a9517919.js"
+    ],
+    "css": [
+      "assets/index.svelte_svelte_type_style_lang-598e202e.css"
     ]
   },
   "pages/for_developers/media.md": {
@@ -231,7 +239,7 @@
     ]
   },
   "pages/for_developers/pages.md": {
-    "file": "chunks/pages-34c5cd21.js",
+    "file": "chunks/pages-dd768695.js",
     "src": "pages/for_developers/pages.md",
     "isDynamicEntry": true,
     "imports": [
@@ -247,12 +255,15 @@
     ]
   },
   "pages/for_developers/quickstart.md": {
-    "file": "chunks/quickstart-9fd4020f.js",
+    "file": "chunks/quickstart-93eadf03.js",
     "src": "pages/for_developers/quickstart.md",
     "isDynamicEntry": true,
     "imports": [
       "_vendor-a9517919.js",
-      "_index-d413d163.js"
+      "_index-ab99ab32.js"
+    ],
+    "css": [
+      "assets/index.svelte_svelte_type_style_lang-598e202e.css"
     ]
   },
   "pages/for_developers/sample-project.md": {
@@ -264,7 +275,7 @@
     ]
   },
   "pages/for_developers/snippets.md": {
-    "file": "chunks/snippets-3430797a.js",
+    "file": "chunks/snippets-cbe8d30f.js",
     "src": "pages/for_developers/snippets.md",
     "isDynamicEntry": true,
     "imports": [
@@ -275,7 +286,7 @@
     ]
   },
   "pages/for_developers/statics.md": {
-    "file": "chunks/statics-e22a3ebb.js",
+    "file": "chunks/statics-32f03d42.js",
     "src": "pages/for_developers/statics.md",
     "isDynamicEntry": true,
     "imports": [
@@ -283,7 +294,7 @@
     ]
   },
   "pages/for_developers/styles.md": {
-    "file": "chunks/styles-745741dc.js",
+    "file": "chunks/styles-3176e53f.js",
     "src": "pages/for_developers/styles.md",
     "isDynamicEntry": true,
     "imports": [
@@ -299,7 +310,7 @@
     ]
   },
   "pages/for_developers/translation.md": {
-    "file": "chunks/translation-b819ede5.js",
+    "file": "chunks/translation-1c28d07f.js",
     "src": "pages/for_developers/translation.md",
     "isDynamicEntry": true,
     "imports": [
