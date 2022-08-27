@@ -22,22 +22,19 @@ The tables below include the prefix you'd type, the file type (or part of a Svel
 
 ### Style snippets
 
-| Prefix            | Type      | Description                                                                                                         |
-| ----------------- | --------- | ------------------------------------------------------------------------------------------------------------------- |
-| `scss`            | `.svelte` | Insert an SCSS style tag with optional imports for Reuters Graphics partials                                        |
-| `scss-theme`      | `.svelte` | Insert an SCSS style tag that imports the default Reuters Graphics theme (useful for [page components](./pages.md)) |
-| `fonts-mixins`    | `.scss`   | Insert an import of Reuters Graphics [fonts mixins](https://reuters-graphics.github.io/style/fonts/)                |
-| `fonts-variables` | `.scss`   | Insert an import of Reuters Graphics [fonts variables](https://reuters-graphics.github.io/style/fonts/)             |
+| Prefix | Type      | Description                                                                  |
+| ------ | --------- | ---------------------------------------------------------------------------- |
+| `scss` | `.svelte` | Insert an SCSS style tag with optional imports for Reuters Graphics partials |
 
 ### Svelte/JS snippets
 
-| Prefix           | Type            | Description                                                                                                                                                                      |
-| ---------------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `statics`        | `.svelte`       | Import Svelte's [`assets`](https://kit.svelte.dev/docs/modules#$app-paths) store for prefixing paths to static files like images |
-| `load-module`    | `.svelte`       | Insert a module script tag for [loading data](https://kit.svelte.dev/docs#loading) in a SvelteKit page component                                                                 |
-| `env`            | `.svelte`       | Import [`$app/env` SvelteKit stores](https://kit.svelte.dev/docs#modules-$app-env) that tell you what environment (dev, browser, etc.) your code is running in                   |
-| `paths`          | `.svelte`       | Import [`$app/paths` SvelteKit stores](https://kit.svelte.dev/docs#modules-$app-env) that give you paths to prefix URLs with                                                     |
-| `d3-chart-class` | `.svelte` `.js` | Insert our standard Reuters Graphics D3 chart class                                                                                                                              |
-| `d3-data-join`   | `.svelte` `.js` | Insert an example of using D3's [data join](https://observablehq.com/@d3/selection-join) syntax                                                                                  |
+| Prefix           | Type            | Description                                                                                                                                                    |
+| ---------------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `statics`        | `.svelte`       | Import Svelte's [`assets`](https://kit.svelte.dev/docs/modules#$app-paths) store for prefixing paths to static files like images                               |
+| `load-module`    | `.svelte`       | Insert a module script tag for [loading data](https://kit.svelte.dev/docs#loading) in a SvelteKit page component                                               |
+| `env`            | `.svelte`       | Import [`$app/env` SvelteKit stores](https://kit.svelte.dev/docs#modules-$app-env) that tell you what environment (dev, browser, etc.) your code is running in |
+| `paths`          | `.svelte`       | Import [`$app/paths` SvelteKit stores](https://kit.svelte.dev/docs#modules-$app-env) that give you paths to prefix URLs with                                   |
+| `d3-chart-class` | `.svelte` `.js` | Insert our standard Reuters Graphics D3 chart class                                                                                                            |
+| `d3-data-join`   | `.svelte` `.js` | Insert an example of using D3's [data join](https://observablehq.com/@d3/selection-join) syntax                                                                |
 
 :::

@@ -8,7 +8,7 @@ order: 15
 
 # Making more pages & embeds
 
-The graphics kit improves on our previous [graphics rig](https://github.com/reuters-graphics/bluprint_graphics-rig/) by letting you build _multiple_ pages and embeds so you can build multipage newsapps or projects with several embeds for media clients.
+The graphics kit improves on our previous [graphics rig](https://github.com/reuters-graphics/bluprint_graphics-rig/) by letting you build _multiple_ pages and embeds so you can build multi-page newsapps or projects with several embeds for media clients.
 
 - [How to make pages and embeds](#how-to-make-pages-and-embeds)
 - [Public pages](#public-pages)
@@ -16,19 +16,22 @@ The graphics kit improves on our previous [graphics rig](https://github.com/reut
 
 ## How to make pages and embeds
 
-Public pages and embeds are both created in the `pages/` directory. All pages are Svelte components. To create a new one, you'll add a new `.svelte` file in that directory. (You should use slug-case like `my-page.svelte` instead of `MyPage.svelte`.)
+Public pages and embeds are both created in the `pages/` directory. All pages are Svelte components named `+page.svelte`. To create a new one, you'll add a new directory and place a `+page.svelte` page component in it. (You should use slug-case for directories like `my-page/` instead of `MyPage/`.)
 
 ```
 pages/
   embeds/
     en/
-      chart.svelte
-      page.svelte
-  my-second-page.svelte
-  index.svelte
+      chart/
+        +page.svelte
+      page/
+        +page.svelte
+  my-second-page/
+    +page.svelte
+  +page.svelte
 ```
 
-Each Svelte component you place in `pages/` will create an HTML page, so the four components above will create these four pages:
+Each page component you place in `pages/` will create an HTML page, so the four components above will create these four pages:
 
 ```
 📁 index.html
@@ -41,15 +44,18 @@ When you publish your project, pages under the `embeds/` folder will be packaged
 
 ## Public pages
 
-Public pages can be named whatever you like. The filename and directory structure will be used to create the page path. For example, a directory like this:
+Public page directories can be named whatever you like. The directory structure will be used to create the page path. For example, a directory like this:
 
 ```
 pages/
-  index.svelte
-  second-page.svelte
+  +page.svelte
+  second-page/
+    +page.svelte
   countries/
-    usa.svelte
-    uk.svelte
+    usa/
+      +page.svelte
+    uk/
+      +page.svelte
 ```
 
 ... would create pages like:
@@ -61,67 +67,35 @@ pages/
 📁 countries/uk/index.html
 ```
 
-Pages can also be named using dynamic parameters that can create multiple pages.
+Page directories can also be named using dynamic parameters that can create multiple pages.
 
 ```
 pages/
   index.svelte
   countries/
-    [code].svelte
+    [code]/
+      +page.svelte
 ```
 
 Read more in [SvelteKit's docs](https://kit.svelte.dev/docs/routing#pages) about using dynamic parameters.
 
 #### SEO
 
-When you create public pages, you should always add SEO to them. Using our pre-built [SEO component](https://reuters-graphics.github.io/graphics-svelte-components/components/seo) is the easiest way. Add it to your page component with the metadata you want for that page.
-
-```svelte
-<script>
-  import { SEO } from '@reuters-graphics/graphics-svelte-components';
-</script>
-
-<SEO
-  seoTitle="My SEO title"
-  seoDescription="My SEO description"
-  shareTitle="My share title"
-  shareDescription="My share description"
-  shareImgPath="images/reuters-graphics.jpg"
-  lang="en"
-/>
-```
-
-In most cases, you probably want to tie your SEO metadata to a Google doc like this:
-
-```svelte
-<script>
-  import { SEO } from '@reuters-graphics/graphics-svelte-components';
-  import content from '$locales/en/content.json'; // 👈 Adjust to path for doc in locales/ folder
-</script>
-
-<SEO
-  seoTitle="{content.SEOTitle}"
-  seoDescription="{content.SEODescription}"
-  shareTitle="{content.ShareTitle}"
-  shareDescription="{content.ShareDescription}"
-  shareImgPath="{content.ShareImgPath}"
-  lang="en"
-/>
-```
+When you create public pages, you should **always add SEO** to them. Using our pre-built [SEO component](https://reuters-graphics.github.io/graphics-components/?path=/docs/components-seo--default) is the easiest way. Add it to your page component with the metadata you want for that page.
 
 #### Linking between pages
 
-To link between pages, use SvelteKit's [`base`](https://kit.svelte.dev/docs/modules#$app-paths-base) module and prefix any links to your pages in a tags. That will make sure the path to each page is correct in development, on preview pages and when the project is published in the Graphics Server.
+To link between pages, use SvelteKit's [`base`](https://kit.svelte.dev/docs/modules#$app-paths-base) module and prefix any links to your pages in `a` tags. That will make sure the path to each page is correct in development, on preview pages and when the project is published in the Graphics Server.
 
 For example, say you have translated pages like this:
 
 ```
 pages/
-  index.svelte
+  +page.svelte
   fr/
-    index.svelte
+    +page.svelte
   de/
-    index.svelte
+    +page.svelte
 ```
 
 ... use `base` to prefix your links like...
@@ -142,7 +116,7 @@ pages/
 
 Embeds for clients are more restricted than pubic pages in how they should be organized in the `pages/` directory.
 
-Embed components must be added to the `pages/embeds/` directory under a folder named with a valid locale code -- e.g., `en`, `es`, `de`, etc. -- and can be no levels deeper than that.
+Embed components must be added to the `pages/embeds/` directory under a folder named with a valid locale code -- e.g., `en`, `es`, `de`, etc. -- and a folder for the embed name. **They can be no levels deeper than that.**
 
 So embeds like...
 
@@ -150,15 +124,20 @@ So embeds like...
 pages/
   embeds/
     en/
-      page.svelte
-      chart.svelte
-      map.svelte
+      page/
+        +page.svelte
+      chart/
+        +page.svelte
+      map/
+        +page.svelte
     es/
-      page.svelte
-      map.svelte
+      page/
+        +page.svelte
+      map/
+        +page.svelte
 ```
 
-... will create embed pages like ... 
+... will create embed pages like ...
 
 ```
 📁 embeds/en/page/index.html
@@ -187,7 +166,7 @@ Always be sure to include Pym.js on embeddable pages. Using our pre-built compon
   import { PymChild } from '@reuters-graphics/graphics-svelte-components';
 </script>
 
-<PymChild polling={500} />
+<PymChild polling="{500}" />
 ```
 
 #### Preview images
@@ -201,14 +180,7 @@ If your embed includes an `og:image` metatag with a URL to a local image, the gr
   import { SEO } from '@reuters-graphics/graphics-svelte-components';
 </script>
 
-<SEO
-  seoTitle="My embed title"
-  seoDescription="My embed description"
-  shareTitle="My embed title"
-  shareDescription="My embed description"
-  shareImgPath="images/my-embed-preview.jpg" 👈
-  lang="en"
-/>
+<SEO shareImgPath="images/my-embed-preview.jpg" 👈 />
 ```
 
 > 📌 **Note:** The SEO and share titles and descriptions aren't that important for embeds, though you do have to pass _something_ to those props. Also note that the analytics that are normally injected into graphics pages via the `SEO` component are turned off for embeds, so you don't need to worry about them either.

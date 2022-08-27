@@ -12,11 +12,9 @@ order: 8
 
 # Using Reuters Graphics Components
 
-Many common components you'll need to make graphics pages are pre-written for you in our [Reuters Graphics Svelte components library](https://reuters-graphics.github.io/graphics-svelte-components/).
+Many common components you'll need to make graphics pages are pre-written for you in our [Reuters Graphics Svelte components library](https://reuters-graphics.github.io/graphics-components/).
 
-Check out the [demo site](https://reuters-graphics.github.io/graphics-svelte-components/) for a list of the components available and docs on how to use them.
-
-<YouTube id="GmQla2Ce6VA" />
+Check out the [demo site](https://reuters-graphics.github.io/graphics-components/) for a list of the components available and docs on how to use them.
 
 ## Customizing components
 
@@ -26,7 +24,7 @@ Most graphics components can be customized through [props](https://svelte.dev/tu
 
 ```svelte
 <script>
-  import { Headline } from '@reuters-graphics/graphics-svelte-components';
+  import { Headline } from '@reuters-graphics/graphics-components';
 </script>
 
 <Headline hed="My title" dek="The beginning of a beautiful page" />
@@ -38,13 +36,13 @@ One important way our components are written to offer you even more flexibility 
 
 Be sure to check out the [official tutorial](https://svelte.dev/tutorial/slots) to understand how slots -- and especially, [_named_ slots](https://svelte.dev/tutorial/named-slots) -- work, but let's also go through a very common example to see how much power slots give you to customize the elements and styles in the component.
 
-Take a closer look at the [Headline](https://reuters-graphics.github.io/graphics-svelte-components/components/headline) component, which allows you to pass your own elements through several named slots.
+Take a closer look at the [Headline](https://reuters-graphics.github.io/graphics-components/?path=/docs/components-headline--default) component, which allows you to pass your own elements through several named slots.
 
 For example, a crown image can be passed like this:
 
 ```svelte
 <script>
-  import { Headline } from '@reuters-graphics/graphics-svelte-components';
+  import { Headline } from '@reuters-graphics/graphics-components';
 </script>
 
 <Headline hed="My title">
@@ -57,7 +55,7 @@ In this case we've passed an image to the slot, and we can also style that image
 
 ```svelte
 <script>
-  import { Headline } from '@reuters-graphics/graphics-svelte-components';
+  import { Headline } from '@reuters-graphics/graphics-components';
 </script>
 
 <Headline hed="My title">
@@ -78,7 +76,7 @@ So if we want to put something other than an image in its place, we can and can 
 
 ```svelte
 <script>
-  import { Headline } from '@reuters-graphics/graphics-svelte-components';
+  import { Headline } from '@reuters-graphics/graphics-components';
 </script>
 
 <Headline hed="My title">
@@ -96,6 +94,6 @@ So if we want to put something other than an image in its place, we can and can 
 </style>
 ```
 
-**Upshot**: Be sure to pay special attention to what slots are available in our Graphics Components (By reading [the docs](https://reuters-graphics.github.io/graphics-svelte-components/)!) and use them to more deeply customize your components.
+**Upshot**: Be sure to pay special attention to what slots are available in our Graphics Components (By reading [the docs](https://reuters-graphics.github.io/graphics-components/)!) and use them to more deeply customize your components.
 
 :::

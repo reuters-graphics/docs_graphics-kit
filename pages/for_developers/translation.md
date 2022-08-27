@@ -41,13 +41,15 @@ And let's say you wanted to publish a page and embed in both English 🇬🇧 an
 ```bash
 pages/
   de/
-    index.svelte 🇩🇪
+    +page.svelte 🇩🇪
   embeds/
     en/
-      page.svelte 🇬🇧
+      page/
+        +page.svelte 🇬🇧
     de/
-      page.svelte 🇩🇪
-  index.svelte 🇬🇧
+      page/
+        +page.svelte 🇩🇪
+  +page.svelte 🇬🇧
 
 ```
 

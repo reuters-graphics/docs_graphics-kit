@@ -33,7 +33,7 @@ section.body-text p {
 
 The kit already imports this stylesheet in all your pages and embeds.
 
-If you want to create _other_ global stylesheets -- say to only apply to a particular page -- simply create another `.scss` file and import it in the page that you want to apply it to (probably _after_ any house lib imports).
+If you want to create _other_ global stylesheets -- say to only apply to a particular page -- simply create another `.scss` file and import it in the page that you want to apply it to.
 
 ```scss
 // src/lib/styles/second.scss
@@ -46,7 +46,6 @@ body {
 <!-- pages/second-page.svelte -->
 <script>
   // ...
-  import '@reuters-graphics/style-theme-eisbaer/scss/main.scss';
   import '$lib/styles/second.scss';
 </script>
 ```

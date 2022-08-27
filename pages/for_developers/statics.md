@@ -29,7 +29,8 @@ If you have an [embeddable page](https://reuters-graphics.github.io/docs_graphic
 pages/
   embeds/
     en/
-      chart.svelte
+      chart/
+        +page.svelte
 media-assets/
   en/
     chart/
