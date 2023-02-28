@@ -187,7 +187,7 @@ To do that, use `.toLocaleString()` instead of `apDate()` and pass in these prop
 
 ## Note on uploading to RNGS
 
-In this rig, we no longer upload and publish separate packs for translated interactive pages. To share translated pages, simply add the `lang` prop at the end of the URl.
+In this rig, we no longer upload and publish [separate editions](https://github.com/reuters-graphics/bluprint_graphics-kit/issues/1#issuecomment-811891029) for translated interactive pages. To share translated pages, simply add the `lang` prop at the end of the URl.
 
 For example, if this is the URL for the English interactive page:
 `https://www.reuters.com/graphics/PERU-PROTEST/ROADBLOCK/zgpobnbwavd/`
