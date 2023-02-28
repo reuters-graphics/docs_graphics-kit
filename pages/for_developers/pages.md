@@ -13,6 +13,7 @@ The graphics kit improves on our previous [graphics rig](https://github.com/reut
 - [How to make pages and embeds](#how-to-make-pages-and-embeds)
 - [Public pages](#public-pages)
 - [Embeds](#embeds)
+- [Notion page on embeds with an embeddable ai2svelte example](https://www.notion.so/Embeds-for-pages-798975a207424c1ab4df6960905f0bc6?pvs=4)
 
 ## How to make pages and embeds
 
