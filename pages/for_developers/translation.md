@@ -71,7 +71,7 @@ Inside each `+page.svelte`, import the correct content for its translation and p
 <!-- 🇬🇧 pages/+page.svelte -->
 <script>
   import content from '$locales/en/content.json';
-  import MyPage from '$lib/MyPage/index.svelte';
+  import App from '$lib/App/index.svelte';
 </script>
 
 <App content="{content}" />
@@ -81,7 +81,7 @@ Inside each `+page.svelte`, import the correct content for its translation and p
 <!-- 🇩🇪 pages/de/+page.svelte -->
 <script>
   import content from '$locales/de/content.json';
-  import MyPage from '$lib/MyPage/index.svelte';
+  import App from '$lib/App/index.svelte';
 </script>
 
 <App content="{content}" lang="{'de'}" />
