@@ -98,6 +98,32 @@ And the common component `App.svelte` can use the correct translated text passed
 <h1>{content.greeting}</h1>
 ```
 
+## Embeds
+
+Make sure you remember to import the google doc content and pass it into `App.svelte` in `pages/embeds/en/page/+page.svelte`:
+
+```svelte
+<!-- 🇬🇧 Embed page: pages/embeds/en/page/+page.svelte -->
+<script>
+  import content from '$locales/de/content.json';
+  import App from '$lib/App/index.svelte';
+</script>
+
+<App content="{content}" />
+```
+
+If you make translated version of embed pages, remember to do the same:
+
+```svelte
+<!-- 🇩🇪 Embed page: pages/embeds/de/page/+page.svelte -->
+<script>
+  import content from '$locales/de/content.json';
+  import App from '$lib/App/index.svelte';
+</script>
+
+<App content="{content}" lang="{'de'}" />
+```
+
 ## Translating dateline and byline
 
 Use the `lang` prop passed into `App.svelte` and an `if/else` statement to add translations for words such as "Published" and "By".
