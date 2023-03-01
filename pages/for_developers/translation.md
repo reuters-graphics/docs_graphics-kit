@@ -119,7 +119,7 @@ The same principle applies to your embeds:
   import App from '$lib/App.svelte';
 </script>
 
-<App content="{germanContent}" lang="{'de'}" />
+<App content="{germanContent}" locale="{'de'}" />
 ```
 
 ## Changing components in Svelte based on translation
@@ -195,7 +195,7 @@ For example, let's put the dateline in more Euro-friendly format using the javas
   </span>
   <div slot="dateline">
     <!-- 🇪🇸 locale -->
-    {#if lang === 'es'}
+    {#if locale === 'es'}
       Publicado <time datetime="{content.Published}">
         {new Date(content.Published).toLocaleString('es-ES', {
           year: 'numeric',
