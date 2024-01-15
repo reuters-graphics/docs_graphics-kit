@@ -164,7 +164,7 @@ Always be sure to include Pym.js on embeddable pages. Using our pre-built compon
 
 ```svelte
 <script>
-  import { PymChild } from '@reuters-graphics/graphics-svelte-components';
+  import { PymChild } from '@reuters-graphics/graphics-components';
 </script>
 
 <PymChild polling="{500}" />
